@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "NewOrderPvt";
+    Layout = "~/Views/Shared/_LayoutClientPvt.cshtml";
+}
+
+<div class="container" style="background-color:white; border-radius:7em; float:right; width:74%; height:auto;  margin-right:50px;">
+    <form class="form-inline" role="form">
+        <h1 style="color:black; font-weight:700; font-family:Gabriola; text-align:left; margin-left:25px; font-size:50px;">New Order>Private</h1>
+        <div class="row">
+            <div class="col-sm-4" id="form-style">
+                <input type="text" class="form-control" placeholder="First Name" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+            <div class="col-sm-4" id="form-style">
+                <input type="text" class="form-control" placeholder="Last Name" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+            <div class="col-sm-4" id="form-style">
+                <input type="email" class="form-control" placeholder="Email" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4" id="form-style">
+                <input type="number" class="form-control" placeholder="Chassi Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+            <div class="col-sm-4" id="form-style">
+                <input type="tel" class="form-control" placeholder="License Plate" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+            <div class="col-sm-4" id="form-style">
+                <input type="number" class="form-control" placeholder="Phone number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4" id="form-style">
+                <input type="number" class="form-control" placeholder="Mobile" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+            <div class="col-sm-4" id="form-style">
+                <input type="text" class="form-control" placeholder="Postcode" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+            <div class="col-sm-4" id="form-style">
+                <input type="text" class="form-control" placeholder="Street Adress" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4" id="form-style">
+                <input type="text" class="form-control" placeholder="Country" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+            <div class="col-sm-4" id="form-style">
+                <input type="text" class="form-control" placeholder="City" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+            <div class="col-sm-4" id="form-style">
+                <select class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                    <option value="service category">Service Category</option>
+                    <option value="service category">1</option>
+                    <option value="service category">2</option>
+                    <option value="service category">3</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6" id="form-style">
+                <select class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                    <option value="Service">Service</option>
+                    <option value="Service">1</option>
+                    <option value="Service">2</option>
+                    <option value="Service">3</option>
+                </select>
+            </div>
+            <div class="col-sm-6" id="form-style">
+                <input type="text" class="form-control" placeholder="Chosen Service(s)" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12" id="form-style">
+                <textarea class="form-control" name="message" placeholder="Order description" required style="margin-left: 12%; width: 900px; height: 80px; border-width: 2px; border-color: #12A8F1;"></textarea>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit" id="fbutton">
+            Save Order
+        </button>
+    </form>
+</div>

@@ -1,0 +1,170 @@
+﻿@{
+    ViewBag.Title = "OrderReport";
+    Layout = "~/Views/Shared/_LayoutClientPvt.cshtml";
+}
+
+<div class="container" style="background-color:white; width: 72%; float: right; margin-right: 60px; height: auto; border-radius: 7%; margin-left: 160px;">
+    <div style=" display: block; padding: 10px;  margin-bottom: 30px; text-align: justify;">
+        <form class="form-inline" role="form">
+            <h1 style="color:black; font-weight:700; font-family:Gabriola; text-align:left; font-size:50px; margin-left:25px;">Order Report</h1>
+            <div class="row">
+                <div class="col-sm-4" id="form-style">
+                    <input type="text" class="form-control" placeholder="Service Name" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+                <div class="col-sm-4" id="form-style">
+                    <input type="number" class="form-control" placeholder="License Plate" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+                <div class="col-sm-4" id="form-style">
+                    <input type="number" class="form-control" placeholder="Chassi Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4" id="form-style">
+                    <select class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                        <option value="Service">Client Type</option>
+                        <option value="Service">Private</option>
+                        <option value="Service">Company</option>
+                    </select>
+                </div>
+                <div class="col-sm-4" id="form-style">
+                    <select class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                        <option value="Service">Service Category</option>
+                        <option value="Service">1</option>
+                        <option value="Service">2</option>
+                        <option value="Service">3</option>
+                    </select>
+                </div>
+                <div class="col-sm-4" id="form-style">
+                    <select class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                        <option value="Service">Sub-Service Category</option>
+                        <option value="Service">1</option>
+                        <option value="Service">2</option>
+                        <option value="Service">3</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6" id="form-style">
+                    <label style="color: black; font-size: 16px; margin-left: 30px;">Date From</label>
+                    <input type="date" class="form-control" placeholder="Date From" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+                <div class="col-sm-6" id="form-style">
+                    <label style="color: black; font-size: 16px; margin-left: 30px;">Date To</label>
+                    <input type="date" class="form-control" placeholder="Date To" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+            </div>
+            <button type="submit" id="fbutton">Search</button>
+        </form>
+
+    </div>
+    <div style=" display: block; padding: 10px;  margin-bottom: 10px; text-align: justify;">
+        <br />
+        <form class="form-inline" role="form">
+            <div class="row">
+                <div class="col-sm-4" id="form-style">
+                    <input type="number" class="form-control" placeholder="Order Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+                <div class="col-sm-4" id="form-style">
+                    <input type="datetime" class="form-control" placeholder="Date/Time" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+                <div class="col-sm-4" id="form-style">
+                    <input type="number" class="form-control" placeholder="License Plate" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4" id="form-style">
+                    <input type="number" class="form-control" placeholder="Chassi Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+                <div class="col-sm-4" id="form-style">
+                    <input type="text" class="form-control" placeholder="Client" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+                <div class="col-sm-4" id="form-style">
+                    <input type="number" class="form-control" placeholder="Price" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <button type="submit" id="fbutton" style="margin-right:-270px; padding:2px;">Export</button>
+                </div>
+                <div class="col-sm-6">
+                    <button type="submit" id="fbutton" style="margin-left:190px; padding:2px;">Print</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div class="container" style="background-color:white; width: 72%; float: right; margin-right: 60px; height: auto; border-radius: 7%; margin-left: 160px;">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Date From </th>
+                <th>Date To</th>
+                <th>Service Category</th>
+                <th>Service Sub-Category</th>
+                <th>Service Name</th>
+                <th>Client Type</th>
+                <th>License Plate</th>
+                <th>Chassi Number</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

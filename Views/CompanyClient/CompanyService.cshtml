@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "CompanyService";
+    Layout = "~/Views/Shared/_LayoutClientCmpny.cshtml";
+}
+
+<div class="container" style="background-color:white; float: right; margin-right: 80px; margin-top:110px; width: 70%; height: auto; border-radius: 7%; margin-left: 160px;">
+    <form class="form-inline" role="form">
+        <h1 style="color:black; font-weight:700; font-family:Gabriola; text-align:left; font-size:50px; margin-left:25px;">Services>Company</h1>
+        <div class="row">
+            <div class="col-sm-4" id="form-style">
+                <input type="text" class="form-control" placeholder="Service Name" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+            <div class="col-sm-4" id="form-style">
+                <select class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                    <option value="Choose category">Choose Category</option>
+                    <option value="Choose category">1</option>
+                    <option value="Choose category">2</option>
+                    <option value="Choose category">3</option>
+                </select>
+            </div>
+            <div class="col-sm-4" id="form-style">
+                <select class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                    <option value="Choose service type">Choose Service Type</option>
+                    <option value="Choose service type">1</option>
+                    <option value="Choose service type">2</option>
+                    <option value="Choose service type">3</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4" id="form-style">
+                <input type="number" class="form-control" placeholder="Price (Ex VAT)" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+            <div class="col-sm-4" id="form-style">
+                <input type="number" class="form-control" placeholder="Price (Inc VAT)" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+            <div class="col-sm-4" id="form-style">
+                <select class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                    <option value="Company name">Company name</option>
+                    <option value="Company name">1</option>
+                    <option value="Company name">2</option>
+                    <option value="Company name">3</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" id="fbutton" style="margin-right:50px;">Save</button>
+    </form>
+</div>
+

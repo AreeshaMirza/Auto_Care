@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="~/Content/Admin.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="~/css/simple-sidebar.css" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fulid">
+
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <p class="navbar-brand " style="font-size:20px;">
+                            <a class="navbar-brand" href="#" id="menu-toggle" style="color: gray;font-size:40px; font-family:Gabriola; "><b>Dashboard</b></a>
+                        </p>
+
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <div class="dropdown pull-right" style="margin-top:17px; margin-right:20px; background-color:black;">
+                            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:black;">
+                                <p style="color:white;" class="glyphicon glyphicon-user">Areesha</p>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dLabel">
+                                <ul>
+                                    <li><a href="/Admin/Profile" style="color:black;">Profile</a></li>
+                                    <li><a href="/Home/AutoCare" style="color:black;">Sign out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="wrapper">
+        <div class="overlay"></div>
+
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Brand
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart">NewOrder</span><span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"></a></li>
+                        <li><a href="/CompanyClient/NewOrdercmpy">Company</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-edit">Services</i><span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Add Service Pakage</li>
+                        <li><a href="/CompanyClient/CompanyService">Company</a></li>
+                        <li class="dropdown-header">List</li>
+                        <li><a href="/CompanyClient/ServiceListCmpy">Company</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-edit">Orders</i><span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Open Order</li>
+                        <li><a href="/CompanyClient/OpenOrderCmpy">Company</a></li>
+                        <li class="dropdown-header">Pending Order</li>
+                        <li><a href="/CompanyClient/PendingOrderCmpy">Company</a></li>
+                        <li class="dropdown-header">Finish Order</li>
+                        <li><a href="/CompanyClient/FinishOrderCmpy">Company</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-edit">Reports</i><span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"></a></li>
+                        <li><a href="/CompanyClient/OrderReport">Order Report</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-edit">Invoice</i><span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"></a></li>
+                        <li><a href="/CompanyClient/MyInvoice">My Invoice</a></li>
+                        <li><a href="/CompanyClient/NewInvoice">Create New Invoice</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart">Sell&Purchase</span><span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header"></li>
+                        <li><a href="/CompanyClient/SellPurchase">New Cars</a></li>
+                        <li><a href="/CompanyClient/SellPurchaseOld">Old Cars</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/CompanyClient/User"><span class="glyphicon glyphicon-user">User</span></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+                <span class="hamb-middle"></span>
+                <span class="hamb-bottom"></span>
+            </button>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <div class="navbar navbar-fixed-bottom" style="background-color: rgba(8, 8, 8, 0.73);">
+        <div class="container" style="background-color: rgba(8, 8, 8, 0.73);">
+            <p class="navbar-text pull-left">
+                © 2017 - Auto Care.
+                <a href="http://tinyurl.com/tbvalid" target="_blank">Terms & Conditions</a>
+            </p>
+            <ul class="social-icon animate pull-right" style="margin-right: -80px; margin-top: 10px;">
+                <li><a href="#" title="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li> <!-- change the link to social page and edit title-->
+                <li><a href="#" title="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#" title="google plus" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+        var trigger = $('.hamburger'),
+            overlay = $('.overlay'),
+           isClosed = false;
+
+        trigger.click(function () {
+            hamburger_cross();
+        });
+
+        function hamburger_cross() {
+
+            if (isClosed == true) {
+                overlay.hide();
+                trigger.removeClass('is-open');
+                trigger.addClass('is-closed');
+                isClosed = false;
+            } else {
+                overlay.show();
+                trigger.removeClass('is-closed');
+                trigger.addClass('is-open');
+                isClosed = true;
+            }
+        }
+
+        $('[data-toggle="offcanvas"]').click(function () {
+            $('#wrapper').toggleClass('toggled');
+        });
+    });
+</script>

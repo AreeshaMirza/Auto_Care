@@ -1,0 +1,158 @@
+﻿@{
+    ViewBag.Title = "NewInvoice";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container" style="background-color: white; width: 72%; float: right; margin-right: 60px; height: auto; border-radius: 7%; margin-left: 160px;">
+    <div style=" display: block; padding: 10px;  margin-bottom: 30px; text-align: justify;">
+        <form class="form-inline" role="form">
+            <h1 style="color:black; font-weight:700; font-family:Gabriola; text-align:left;; font-size:50px; margin-left:25px;">Create New  Invoice</h1>
+            <div class="row">
+                <div class="col-sm-6" id="form-style">
+                    <label style="color:black; font-size: 16px; margin-left: 30px;">Order Form</label>
+                    <input type="date" class="form-control" placeholder="CP Phone Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+                <div class="col-sm-6" id="form-style">
+                    <label style="color: black; font-size: 16px; margin-left: 30px;">Orders Empty</label>
+                    <input type="date" class="form-control" placeholder="CP Email" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6" id="form-style">
+                    <div class="col-sm-4" id="form-style">
+                        <select class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                            <option value="service category">Company Name</option>
+                            <option value="service category">1</option>
+                            <option value="service category">2</option>
+                            <option value="service category">3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-6" id="form-style">
+                    <div class="col-sm-4" id="form-style">
+                        <select class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                            <option value="service category">Contact</option>
+                            <option value="service category">1</option>
+                            <option value="service category">2</option>
+                            <option value="service category">3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+
+            <button type="submit" id="fbutton" style="margin-right:320px;">Search</button>
+        </form>
+    </div>
+
+    <div style=" display: block; padding: 10px;  margin-bottom: 30px; text-align: justify;">
+        <br />
+        <form class="form-inline" role="form">
+            <div class="row">
+                <div class="col-sm-6" id="form-style">
+                    <label style="color:black; font-size:16px; margin-left:30px;">Invoice Date</label>
+                    <input type="date" class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+                <div class="col-sm-6" id="form-style">
+                    <label style="color: black; font-size: 16px; margin-left: 30px;">Due Date</label>
+                    <input type="date" class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4" id="form-style">
+                    <input type="number" class="form-control" placeholder="Price (Ex VAT)" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+                <div class="col-sm-4" id="form-style">
+                    <input type="number" class="form-control" placeholder="Price (Inc VAT)" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+                <div class="col-sm-4" id="form-style">
+                    <input type="number" class="form-control" placeholder="Price (Inc VAT)" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4" id="form-style">
+                    <input type="number" class="form-control" placeholder="Price (Ex VAT)" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+                <div class="col-sm-4" id="form-style">
+                    <input type="number" class="form-control" placeholder="Price (Inc VAT)" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+                <div class="col-sm-4" id="form-style">
+                    <input type="number" class="form-control" placeholder="Price (Inc VAT)" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                </div>
+            </div>
+
+            <button type="submit" id="fbutton" style="margin-right:30px; width:200px;">Create New Invoice</button>
+        </form>
+    </div>
+    </div>
+
+<div class="container" style="background-color:white; width: 72%; float: right; margin-right: 60px; height: auto; border-radius: 7%; margin-left: 160px;">
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Order Number</th>
+                <th>REG No.</th>
+                <th>Chassi Number</th>
+                <th>Service Category</th>
+                <th>Select Company</th>
+                <th>Service</th>
+                <th>Contact</th>
+                <th>Selected Services</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>User Name</th>
+                <th>Price</th>
+                <th>Date</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
