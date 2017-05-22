@@ -5,19 +5,65 @@
 
 <div class="container" style="background-color: white; width: 72%; float: right; margin-right: 70px; height: auto; border-radius: 7%; margin-left: 160px;">
     <form class="form-inline" role="form">
-        <h1 style="color: #12A8F1; font-weight: 700; font-family: Gabriola; text-align: left; font-size: 50px; margin-left: 25px;">My Invoice</h1>
+        <h1 style="color: black; font-weight: 700; font-family: Gabriola; text-align: left; font-size: 50px; margin-left: 25px;">Private Invoice</h1>
         <div class="row">
             <div class="col-sm-6" id="form-style" style="margin-left:120px;">
-                <input type="date" class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="date" id="a" class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
             <div class="col-sm-6" id="form-style" style="margin-left:100px;">
-                <input type="date" class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="date" id="b" class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
         </div>
 
-        <button type="submit" id="fbutton">Search</button>
+        <button id="fbutton" type="button" onclick="find()">Search</button>
     </form>
 </div>
+
+<script>
+
+    function find() {
+        var a = $('#a').val().toString();
+        var b = $('#b').val().toString();
+
+
+        $.getJSON("/Admin/SearchInvoicePvt",
+
+        {
+            a: a,
+            b: b,
+
+        },
+         function (data) {
+
+             //                console.log(data);
+             if (data != null) {
+                 var str = " ";
+                 for (var i = 0; i < data.length; i++) {
+                     str += "<tr>";
+                     str += "<td id='r" + i + "'>" + data[i].InvoiceNo + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].OrderNo + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].OCR + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].InvoiceDate + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].ExpDate + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].OurRefernce + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].InterestRate + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].RemainderFee + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].UserName + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].Status + "</td>";
+
+                     str += "</tr>";
+                 }
+
+             }
+
+             else if (data == false) {
+                 alert("Sorrry no record");
+             }
+             $('#t12').html(str);
+         });
+
+    };
+</script>
 
 
 <div class="container" style="background-color: white; width: 72%; float: right; margin-right: 70px; height: auto; border-radius: 7%; margin-left: 160px;">
@@ -25,80 +71,67 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Order Number</th>
                 <th>Invoice Number</th>
+                <th>Order Number</th>
                 <th>OCR</th>
                 <th>Invoice Date</th>
-                <th>Due Date</th>
+                <th>Exp Date</th>
                 <th>Our Reference</th>
-                <th>Interset</th>
-                <th>Reminder Fee</th>
-                <th>Status</th>
-                <th>Price</th>
+                <th>Interset Rate</th>
+                <th>Remainder Fee</th>
                 <th>User Name</th>
-                <th>
-                    <div class="btn-group">
-                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <span>Measurement</span>
-                        </button>
-                        <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                            <li>Edit</li>
-                            <li>Delete</li>
-                        </ul>
-                    </div>
-                </th>
-
-
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-
-            </tr>
-            <tr>
-
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+                <th>Status</th>
+                <th>Measurement</th>
+        <tbody id="t12">
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>
+                        @x.InvoiceNo
+                    </td>
+                    <td>
+                        @x.OrderNo
+                    </td>
+                    <td>
+                        @x.OCR
+                    </td>
+                    <td>
+                        @x.InvoiceDate
+                    </td>
+                    <td>
+                        @x.ExpDate
+                    </td>
+                    <td>
+                        @x.OurRefernce
+                    </td>
+                    <td>
+                        @x.InterestRate
+                    </td>
+                    <td>
+                        @x.RemainderFee
+                    </td>
+                    <td>
+                        @x.UserName
+                    </td>
+                    <td>
+                        @x.Status
+                    </td>
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span> Action</span>
+                            </button>
+                            <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
+                                <li><a href="/Admin/updateSerCmpy/@x.Id">Update</a></li>
+                                <li><a href="/Admin/DeleteServiceCmpy/@x.Id">Delete</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            }
         </tbody>
     </table>
 </div>
+
 
 

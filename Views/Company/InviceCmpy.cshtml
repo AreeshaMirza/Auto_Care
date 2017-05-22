@@ -1,0 +1,66 @@
+﻿@model AC_Car_Service_.Models.InvoiceCmpy
+@{
+    ViewBag.Title = "InviceCmpy";
+    Layout = "~/Views/Shared/_LayoutCompany.cshtml";
+}
+
+<div class="container" style="background-color:white; float:right; width:72%; height:auto; border-radius:7%; margin-right:60px;">
+    <form action="/Company/ICmpy/@Model.Id" method="post">
+        <div class="row">
+            <div class="col-md-4" id="form-style">
+                <input id="InvoiceNo" name="InvoiceNo" type="text" class="form-control" placeholder="InvoiceNo" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.InvoiceNo" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="CmpyNo" name="CmpyNo" type="text" class="form-control" placeholder="CmpyNo" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.CmpyNo" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="OrdersFrom" name="OrdersFrom" type="text" class="form-control" placeholder="OrdersFrom" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.OrdersFrom" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" id="form-style">
+                <input id="OrderTo" name="OrderTo" type="text" class="form-control" placeholder="OrderTo" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.OrderTo" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="InvoiceDate" name="InvoiceDate" type="text" class="form-control" placeholder="InvoiceDate" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.InvoiceDate" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="OCR" name="OCR" type="text" class="form-control" placeholder="OCR" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.OCR" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" id="form-style">
+                <input id="ExpDate" name="ExpDate" type="text" class="form-control" placeholder="ExpDate" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.ExpDate" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="OurReference" name="OurReference" type="text" class="form-control" placeholder="OurReference" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.OurReference" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="ContactPerson" name="ContactPerson" type="text" class="form-control" placeholder="ContactPerson" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.ContactPerson" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" id="form-style">
+                <input id="Interest" name="Interest" type="text" class="form-control" placeholder="Interest" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.Interest" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="ReminderFee" name="ReminderFee" type="text" class="form-control" placeholder="ReminderFee" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.ReminderFee" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="UserName" name="UserName" type="text" class="form-control" placeholder="UserName" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.UserName" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="form-style">
+                <input id="OrderNo" name="OrderNo" type="text" class="form-control" placeholder="OrderNo" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.OrderNo" />
+            </div>
+            <div class="col-md-6" id="form-style">
+                <input id="Status" name="Status" type="text" class="form-control" placeholder="Status" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.Status" />
+            </div>
+        </div>
+
+        <input type="submit" id="fbutton" value="Create My Invoice" />
+
+
+    </form>
+</div>

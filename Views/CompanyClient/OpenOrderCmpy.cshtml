@@ -3,90 +3,62 @@
     Layout = "~/Views/Shared/_LayoutClientCmpny.cshtml";
 }
 
-<div class="container" style="background-color:white; float:right; width:72%; height:auto; border-radius:7%; margin-right:70px;">
+<div class="container" style="background-color:white; float:right; width:auto; height:auto; border-radius:7%; margin-right:40px;">
     <h1 style="color:black; font-weight:700; font-family:Gabriola; text-align:left; margin-left:10px; font-size:50px;">Open Order>Company</h1>
-    <table class="table table-striped">
+    <table class="table table-striped" id="header-fixed">
         <thead>
             <tr>
-                <th>Order Number</th>
-                <th>Date and Time</th>
-                <th>Plate/Chassi Number</th>
-                <th>Company Name</th>
-                <th>Services</th>
-                <th>Status</th>
+                <th>License Plate</th>
+                <th>Chassi Number</th>
+                <th>Company List</th>
+                <th>Contact Person</th>
+                <th>Service Category</th>
+                <th>Service</th>
+                <th>Choosen Service</th>
+                <th>Order Description</th>
                 <th>Action</th>
-
-
             </tr>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>
+                        @x.licensePlate
+                    </td>
+                    <td>
+                        @x.chassiNo
+                    </td>
+                    <td>
+                        @x.companyList
+                    </td>
+                    <td>
+                        @x.contactPerson
+                    </td>
+                    <td>
+                        @x.serviceCategory
+                    </td>
+                    <td>
+                        @x.service
+                    </td>
+                    <td>
+                        @x.choosenService
+                    </td>
+                    <td>
+                        @x.orderDescription
+                    </td>
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span> Action</span>
+                            </button>
+                            <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
+                                <li><a href="/CompanyClient/updateOC/@x.Id">Update</a></li>
+                                <li><a href="/CompanyClient/DeleteCmpy/@x.Id">Delete</a></li>
+                            </ul>
+                        </div>
+                    </td>
+
+                </tr>
+            }
         </thead>
-        <tbody>
-            <tr>
-
-
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <div class="btn-group">
-                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <span> Action</span>
-                        </button>
-                        <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                            <li>Edit</li>
-                            <li>Delete</li>
-                            <li>Print</li>
-                        </ul>
-                    </div>
-                </td>
-
-            </tr>
-            <tr>
-
-
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <div class="btn-group">
-                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <span> Action</span>
-                        </button>
-                        <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                            <li>Edit</li>
-                            <li>Delete</li>
-                            <li>Print</li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-
-
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <div class="btn-group">
-                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <span> Action</span>
-                        </button>
-                        <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                            <li>Edit</li>
-                            <li>Delete</li>
-                            <li>Print</li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
     </table>
 </div>

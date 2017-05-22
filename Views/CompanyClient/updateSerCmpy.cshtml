@@ -1,0 +1,38 @@
+﻿@model AC_Car_Service_.Models.companyService
+@{
+    ViewBag.Title = "updateSerCmpy";
+    Layout = "~/Views/Shared/_LayoutClientCmpny.cshtml";
+}
+
+<div class="container" style="background-color:white; float:right; width:72%; height:auto; border-radius:7%; margin-right:60px;">
+    <form action="/CompanyClient/upDateCompy/@Model.Id" method="post">
+        <div class="row">
+            <div class="col-md-4" id="form-style">
+                <input id="chooseCategory" name="chooseCategory" type="text" class="form-control" placeholder="Choose Category" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.chooseCategory" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="chooseService" name="chooseService" type="text" class="form-control" placeholder="Choose Service" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.chooseService" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="serviceName" name="serviceName" type="text" class="form-control" placeholder="Service Name" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.serviceName" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" id="form-style">
+                <input id="priceEX" name="priceEX" type="text" class="form-control" placeholder="Price VAT" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.priceEX" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="priceInc" name="priceInc" type="text" class="form-control" placeholder="Price Inc" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.priceInc" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="companyName" name="companyName" type="text" class="form-control" placeholder="Company Name" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.companyName" />
+            </div>
+        </div>
+
+        <input type="submit" id="fbutton" value="Update" />
+
+
+    </form>
+</div>
+
+

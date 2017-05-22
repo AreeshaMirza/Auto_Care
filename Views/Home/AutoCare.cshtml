@@ -86,13 +86,6 @@
             <span class="sr-only">Next</span>
         </a>
     </div> <!-- End  bootstrap-touch-slider Slider -->
-
-    <div class="box">
-        <button type="button" class="slide-toggle" style="width:100%; height:50px; background-color:black;">
-            <span class="glyphicon glyphicon-chevron-down" style="color:white; font-size: 40px;">
-            </span>
-        </button>
-    </div>
 </div>
 <script>
     $(document).ready(function () {
@@ -126,23 +119,74 @@
   </script>
 
 <!-- About Section -->
-<section id="2" class="about-section" style="background-color:whitesmoke;">
+<section id="2" class="about-section" style="background-color:whitesmoke; height:600px;">
     <div class="container">
         <div class="row">
             <div class="animated zoomIn" id="div1">
                 <div class="col-lg-12 text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="250ms">
-                    <h1 style="font-family:Gabriola;font-size:50px;color:black; font-weight:600;"><b>About</b></h1>
-                    <img src="~/Images/about-us-icon-14.png" class="image" style="width:200px; height:180px;" />
-                    <br /><br />
-                    <div class="tooltip">
-                        <p class="tooltiptxt" style="color:black;text-align:center;margin-top:7px;">ABOUT!</p>
-                    </div>
-                    <p style="color:black; text-align:center; font-family:Gabriola;font-size:25px;">
-
-                        Auto Care Pakistan was established in 2016 and serves individuals and company customers throughout Pakistan. We have 15 years experience in US limousine market offering limo service in top US .StatesTo further extend our service in other cities of Pakistan, we proudly announce to start  service in Lahore.
-
-                        Auto Care Pakistan are experts in high quality chauffeured transportation which is complimented by a variety of new model cars, passenger vans for tours and mini coaches for pick and drop facility for employees. Our whole team is committed to provide the top level of customer service and ensuring you reach your desired destination on-time, all the time.
+                   
+                    <h1 style="font-family:Gabriola;font-size:50px;color:black; font-weight:600;"><b>WHY CHOOSE US ?</b></h1> <hr style=" display: block; margin-top: 0.5em; margin-bottom: 0.5em; margin-left: 40%; margin-right: 40%; border-style: inset; border-width: 1px; border-color: skyblue;" />
+                    <p style="align-content:center; color:gray;">
+                        We are one of the leading auto repair shops serving customers in Tucson.<br />
+                        All mechanic services are performed by highly qualified mechanics.
                     </p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-xs-3 col-centered" id="image1">
+                                <img src="~/Images/Screenshot%202017-02-16%2021.49.51%20(4).png" style="width: 100%; height: 100%; margin-left: 60px;" />
+                                <p style="margin-left:30px; ">
+                                    EVERY JOB IS PERSONAL
+
+                                </p>
+                                <hr style=" display: block; margin-top: 0.5em; margin-bottom: 0.5em; margin-left: 25%; margin-right: 50%; border-style: inset; border-width: 1px; border-color: skyblue;" />
+
+                            </div>
+                            <div class="col-md-3 col-xs-3 col-centered" id="image2" style="margin-top:3%;">
+                                <img src="~/Images/Screenshot%202017-02-16%2021.49.51%20(2).png" style="width: 100%; height: 100%; margin-left: 70px;" />
+                                <p style="margin-left:80px; margin-top:3%;">
+                                    BEST MATERIALS
+                                </p>
+                                <hr style=" display: block; margin-top: 0.5em; margin-bottom: 0.5em; margin-left: 40%; margin-right: 40%; border-style: inset; border-width: 1px; border-color: skyblue;" />
+
+                            </div>
+
+                            <div class="col-md-3 col-xs-3 col-centered" id="image3" style="margin-top:3%; ">
+
+                                <img src="~/Images/Screenshot%202017-02-16%2021.49.51%20(3).png" style="width: 100%; height: 100%; margin-left: 70px;" />
+                                <p style="margin-left:80px; margin-top:3%;">
+                                    PROFESSIONAL STANDARDS
+                                </p>
+                                <hr style=" display: block; margin-top: 0.5em; margin-bottom: 0.5em; margin-left: 40%; margin-right: 40%; border-style: inset; border-width: 1px; border-color: skyblue;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div></div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12" style="margin-right:200px;">
+
+                                <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBR7jEgwpG9yjzhsChQek4z7cy_sj0vi5E'></script><div style='overflow:hidden;height:366px;width:1304px;'>
+                                    <div id='gmap_canvas' style='height:366px;width:1304px;'></div>
+                                    <style>
+                                        #gmap_canvas img {
+                                            max-width: none !important;
+                                            background: none !important;
+                                        }
+                                    </style>
+                                </div> <a href='https://indiatvnow.com/'><3 indiatv</a>
+                                <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=13805ecbefb68b306f84c2c0176d91beb9c6fcea'></script>
+                                <script type='text/javascript'>
+function init_map() {
+var myOptions = { zoom: 15, center: new google.maps.LatLng(31.478505, 74.3586027), mapTypeId: google.maps.MapTypeId.HYBRID };
+    map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions); marker = new google.maps.Marker({ map: map, position: new google.maps.LatLng(31.478505, 74.3586027) });
+    infowindow = new google.maps.InfoWindow({ content: '<strong>Auto Care</strong><br>Walton Road<br> Lahore<br>' }); google.maps.event.addListener(marker, 'click', function () { infowindow.open(map, marker); });
+    infowindow.open(map, marker);
+} google.maps.event.addDomListener(window, 'load', init_map);</script>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -156,21 +200,21 @@
             <div class="col-lg-12">
                 <div class="animated fadeInRightBig">
                     
-                    <form action="action_page.php" style=" max-width: 500px; padding: 15px; margin: 0 auto; background-color:white; border-radius: 0.3em;">
+                    <form action="/Home/Login" method="post" style=" max-width: 500px; padding: 15px; margin: 0 auto; background-color:white; border-radius: 0.3em;">
                         <h1 style="color: black; font-family: gabriola; font-size:50px; font-weight:600;"><b>Login Form</b></h1>
-                         <div class="imgcontainer">
+                        <div class="imgcontainer">
                             <img src="~/Images/img_avatar2.png" alt="Avatar" class="avatar" />
                         </div>
 
                         <div class="container" style=" max-width: 400px; padding: 10px; margin: 0 auto; background-color:white; border-radius: 0.3em;">
                             <label style="color: black; float:left;">Username</label>
-                            <input type="text" placeholder="Enter Username" name="uname" required style="height:30px;">
+                            <input type="text" placeholder="Enter Username" name="UserName" required style="height:30px;">
 
                             <label style="color: black; float:left;">Password</label>
-                            <input type="password" placeholder="Enter Password" name="psw" required style="height:30px;">
-                
-                            <a href="/Admin/NewOrderPvt" id="button">Login</a>
-                      
+                            <input type="password" placeholder="Enter Password" name="PIN" required style="height:30px;">
+
+                            <button id="button" type="submit">Login</button>
+                            
                         </div>
 
                         <div class="container" style=" max-width: 400px; padding: 15px; margin: 0 auto; background-color:white; border-radius: 0.3em;">
@@ -196,7 +240,7 @@
                 <!-- line modal -->
                 <div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                     <div class="modal-dialog">
-                        <div class="modal-content" style="height:650px;">
+                        <div class="modal-content" style="height:620px;">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
                                 <h3 class="modal-title" id="lineModalLabel">Make An Appointment</h3>
@@ -205,91 +249,70 @@
 
                             </div>
                             <div class="modal-body">
-                                <form action="/Home/Add" method="post">
+                                <form action="/Home/SignUp" method="post" onsubmit="return checkForm(this);">
                                     <h2 class="animated fadeInDownBig" style="color:black; margin-left: -10px; font-family: gabriola; font-size:50px; font-weight:600; "><b>Sign Up</b></h2>
                                     <div class="animated fadeInLeftBig">
-                                        <input type="radio" name="type" value="Fresher"> Client &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
-                                        <input type="radio" name="type" value="Experienced"> Company
+                                        <input type="radio" name="type" value="Client"> Client &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+                                        <input type="radio" name="type" value="Company"> Company
 
                                         <div class="form-group">
-                                            <label for="firstName" class="col-sm-3 control-label">First Name</label>
+                                            <label for="userName" class="col-sm-3 control-label">User Name</label>
                                             <div class="col-sm-9">
-                                                <input type="text" required id="FirstName" name="FirstName" value="" placeholder="First Name" class="form-control">
+                                                <input type="text" required id="userName" name="userName" value="" placeholder="User Name" class="form-control">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="lastName" class="col-sm-3 control-label">Last Name</label>
+                                            <label for="PIN" class="col-sm-3 control-label">PIN</label>
                                             <div class="col-sm-9">
-                                                <input type="text" required id="LastName" name="LastName" value="" placeholder="Last Name" class="form-control">
+                                                <input type="password" required id="PIN" name="PIN" value="" placeholder="PIN" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="re_enter" class="col-sm-3 control-label">Re-enter PIN</label>
+                                            <div class="col-sm-9">
+                                                <input type="password" required id="re_enter" name="re_enter" value="" placeholder="Re-enter PIN" class="form-control">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="email" class="col-sm-3 control-label">Email</label>
                                             <div class="col-sm-9">
-                                                <input type="email" required id="Email" name="Email" value="" placeholder="Email" class="form-control">
+                                                <input type="email" required id="email" name="email" value="" placeholder="Email" class="form-control">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="password" class="col-sm-3 control-label">Password</label>
+                                            <label for="firstName" class="col-sm-3 control-label">First Name</label>
                                             <div class="col-sm-9">
-                                                <input type="password" required id="txtPassword" name="Password" value="" placeholder="Password" class="form-control">
+                                                <input type="text" required id="firstName" name="firstName" value="" placeholder="First Name" class="form-control">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="password" class="col-sm-3 control-label">Re-enter Password</label>
+                                            <label for="surName" class="col-sm-3 control-label">Last Name</label>
                                             <div class="col-sm-9">
-                                                <input type="password" required id="txtConfirmPassword" name="Re-enter" value="" placeholder="Re-enter you password" class="form-control">
+                                                <input type="text" required id="surName" name="surName" value="" placeholder="Last Name" class="form-control">
                                             </div>
                                         </div>
                                         <br />
-                                        <div class="form-group">
-                                            <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
-                                            <div class="col-sm-9">
-                                                <input type="date" required id="DOB" name="DOB" value="" class="form-control" style="color: #b6b1b1;">
-                                            </div>
+
+                                        <div id="textboxes" style="display: none; font-size:13px;">
+                                            <b> Company's Name </b> <input type="text" placeholder="Company's Name" class="form-control" name="role" id="role" style="width: 370px; height: 30px; padding: 15px; margin:15px;" />
                                         </div>
-                                        <div class="form-group">
-                                            <label for="country" class="col-sm-3 control-label">Country</label>
-                                            <div class="col-sm-9">
-                                                <select id="Country" name="Country" required class="form-control">
-                                                    <option>Select Country</option>
-                                                    <option>Lahore</option>
-                                                    <option>Afghanistan</option>
-                                                    <option>Bahamas</option>
-                                                    <option>Cambodia</option>
-                                                    <option>Denmark</option>
-                                                    <option>Ecuador</option>
-                                                    <option>Fiji</option>
-                                                    <option>Gabon</option>
-                                                    <option>Haiti</option>
-                                                </select>
+                                    </div> <!-- /.form-group -->
+                                    <div class="form-group">
+                                        <div class="col-sm-9 col-sm-offset-3 pull-left">
+                                            <div class="checkbox" style="margin-left:-240px;">
+                                                <label>
+                                                    <input type="checkbox" required>I accept <a href="#">terms</a>
+                                                </label>
                                             </div>
-                                            <div id="textboxes" style="display: none; font-size:13px;">
-                                                <b> Company's Name </b> <input type="text" placeholder="Company's Name" class="form-control" name="companyName" id="companyName" style="width: 370px; height: 30px; padding: 15px; margin:15px;" />
+                                            <div>
+                                                <a href="/Admin/NewOrderPvt"><input type="submit" id="button" onclick="return Validate()" /></a>
                                             </div>
-                                        </div> <!-- /.form-group -->
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3">Gender</label>
-                                            <label class="radio-inline"><input type="radio" name="Gender" value="Male">Male</label>
-                                            <label class="radio-inline"><input type="radio" name="Gender" value="Female">Female</label>
-                                            <label class="radio-inline"><input type="radio" name="Gender"  value="Other">Other</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <div class="col-sm-9 col-sm-offset-3 pull-left">
-                                                <div class="checkbox" style="margin-left:-240px;">
-                                                    <label>
-                                                        <input type="checkbox" required>I accept <a href="#">terms</a>
-                                                    </label>
-                                                </div>
-                                                <div>
-                                                    <a href="/Admin/NewOrderPvt"><input type="submit" id="button" onclick="return Validate()" /></a>
-                                                </div>
-                                            </div>
-
-                                        </div>
                                     </div>
                                 </form>
+                                    </div>
+                               
                                 <!-- content goes here -->
 
 
@@ -302,8 +325,6 @@
                 </div>
                 
             </div>
-        </div>
-
 </section>
 
 <!-- Services Section -->
@@ -385,21 +406,21 @@
             </div>
         </div>
 
-        <form action="action_page.php">
+        <form action="/Home/Addfeedback" method="post">
             <div class="container" style="width:800px;">
                 <div class="row">
                     <div class="col-sm-6" style="margin-top:10px;margin-bottom:2px;">
-                        <input type="text" required class="form-control" id="name" placeholder="Full Name" style="border:ridge; border-color:#d8d4d4;" />
+                        <input type="text" required class="form-control" id="Nme" name="Name" placeholder="Full Name" style="border:ridge; border-color:#d8d4d4;" />
                     </div>
                     <div class="col-sm-6" style="margin-top: 18px; margin-bottom:2px;">
-                        <input type="email" required class="form-control" id="email" placeholder="Email" style="border:ridge; border-color:#d8d4d4;" />
+                        <input type="email" required class="form-control" id="Email" name="Email" placeholder="Email" style="border:ridge; border-color:#d8d4d4;" />
                     </div>
                 </div>
             </div>
             <div class="container" style="width:800px;">
                 <div class=" row">
                     <div class="col-sm-12">
-                        <textarea placeholder="Message" required rows="10" cols="80" class="form-control" id="name" maxlength="999" style="color: #e1e0e0; border: ridge; border-color: #d8d4d4;">Message</textarea>
+                        <textarea placeholder="Message" required rows="10" cols="80" class="form-control" id="Msg" name="Msg" maxlength="999" style="color: #e1e0e0; border: ridge; border-color: #d8d4d4;">Message</textarea>
                     </div>
                 </div>
             </div>
@@ -480,7 +501,7 @@
 
     $(function () {
         $('input[name="type"]').on('click', function () {
-            if ($(this).val() == 'Experienced') {
+            if ($(this).val() == 'Company') {
                 $('#textboxes').show();
             }
             else {
@@ -496,6 +517,46 @@
             alert("Passwords do not match.");
             return false;
         }
+        return true;
+    }
+
+    function checkForm(form) {
+        if (form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+            if (form.pwd1.value.length < 6) {
+                alert("Error: Password must contain at least six characters!");
+                form.pwd1.focus();
+                return false;
+            }
+            if (form.pwd1.value == form.username.value) {
+                alert("Error: Password must be different from Username!");
+                form.pwd1.focus();
+                return false;
+            }
+            re = /[0-9]/;
+            if (!re.test(form.pwd1.value)) {
+                alert("Error: password must contain at least one number (0-9)!");
+                form.pwd1.focus();
+                return false;
+            }
+            re = /[a-z]/;
+            if (!re.test(form.pwd1.value)) {
+                alert("Error: password must contain at least one lowercase letter (a-z)!");
+                form.pwd1.focus();
+                return false;
+            }
+            re = /[A-Z]/;
+            if (!re.test(form.pwd1.value)) {
+                alert("Error: password must contain at least one uppercase letter (A-Z)!");
+                form.pwd1.focus();
+                return false;
+            }
+        } else {
+            alert("Error: Please check that you've entered and confirmed your password!");
+            form.pwd1.focus();
+            return false;
+        }
+
+        alert("You entered a valid password: " + form.pwd1.value);
         return true;
     }
 </script>

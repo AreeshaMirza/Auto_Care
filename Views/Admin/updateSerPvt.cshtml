@@ -1,0 +1,33 @@
+﻿@model AC_Car_Service_.Models.privateService
+@{
+    ViewBag.Title = "updateSerPvt";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container" style="background-color:white; float:right; width:72%; height:auto; border-radius:7%; margin-right:60px;">
+    <form action="/Admin/upDatePvt/@Model.Id" method="post">
+        <div class="row">
+            <div class="col-md-4" id="form-style">
+                <input id="chooseCategory" name="chooseCategory" type="text" class="form-control" placeholder="Choose Category" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.chooseCategory" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="chooseServiceType" name="chooseServiceType" type="text" class="form-control" placeholder="Choose Service Type" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.chooseServiceType" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="serviceName" name="serviceName" type="text" class="form-control" placeholder="Service Name" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.serviceName" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="form-style">
+                <input id="priceVAT" name="priceVAT" type="text" class="form-control" placeholder="Price VAT" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.priceVAT" />
+            </div>
+            <div class="col-md-6" id="form-style">
+                <input id="priceInc" name="priceInc" type="text" class="form-control" placeholder="Price Inc" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.priceInc" />
+            </div>
+        </div>
+
+        <input type="submit" id="fbutton" value="Update" />
+
+
+    </form>
+</div>

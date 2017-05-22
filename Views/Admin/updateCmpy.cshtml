@@ -1,0 +1,63 @@
+﻿@model AC_Car_Service_.Models.clientCompany
+@{
+    ViewBag.Title = "updateCmpy";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container" style="background-color:white; float:right; width:72%; height:auto; border-radius:7%; margin-right:60px;">
+    <form action="/Admin/upDateClient/@Model.Id" method="post">
+        <div class="row">
+            <div class="col-md-4" id="form-style">
+                <input id="orgNo" name="orgNo" type="text" class="form-control" placeholder="Organization Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.orgNo" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="companyName" name="companyName" type="text" class="form-control" placeholder="Company Name" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.companyName" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="customerNumber" name="customerNumber" type="text" class="form-control" placeholder="Customer Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.customerNumber" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" id="form-style">
+                <input id="contactPerson" name="contactPerson" type="text" class="form-control" placeholder="Contact Person" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.contactPerson" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="phone" name="phone" type="text" class="form-control" placeholder="Phone Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.phone" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="mobile" name="mobile" type="text" class="form-control" placeholder="Mobile" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.mobile" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" id="form-style">
+                <input id="compyPhone" name="compyPhone" type="text" class="form-control" placeholder="Company Phone Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.compyPhone" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="compyFax" name="compyFax" type="text" class="form-control" placeholder="Company Fax Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.compyFax" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="email" name="email" type="text" class="form-control" placeholder="Email" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.email" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" id="form-style">
+                <input id="streetAddress" name="streetAddress" type="text" class="form-control" placeholder="Street Address" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.streetAddress" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="postcode" name="postcode" type="text" class="form-control" placeholder="Postcode" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.postcode" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="city" name="city" type="text" class="form-control" placeholder="City" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.city" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="form-style">
+                <input id="country" name="country" type="text" class="form-control" placeholder="Country" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.country" />
+            </div>
+        </div>
+
+        <input type="submit" id="fbutton" value="Update" />
+
+
+    </form>
+</div>

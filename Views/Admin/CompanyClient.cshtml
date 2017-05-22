@@ -4,61 +4,58 @@
 }
 
 <div class="container" style="background-color: white; float: right; margin-right: 80px; margin-top:10px; width: 70%; height: auto; border-radius: 7%; margin-left: 160px;">
-    <form class="form-inline" role="form">
+    <form action="/Admin/AddclientCmpy" method="post" class="form-inline" role="form">
         <h1 style="color: black; font-weight: 700; font-family: Gabriola; text-align: left; font-size: 50px; margin-left: 25px;">Client>Company</h1>
         <div class="row">
             <div class="col-sm-4" id="form-style">
-                <input type="number" class="form-control" placeholder="Organization number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="number" class="form-control" name="orgNo" placeholder="Organization number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
             <div class="col-sm-4" id="form-style">
-                <input type="text" class="form-control" placeholder="Company Name" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="text" class="form-control" name="companyName" placeholder="Company Name" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
             <div class="col-sm-4" id="form-style">
-                <input type="number" class="form-control" placeholder="Customer Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-4" id="form-style">
-                <input type="text" class="form-control" placeholder="Contact person" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
-            </div>
-            <div class="col-sm-4" id="form-style">
-                <input type="number" class="form-control" placeholder="Phone Contact Person" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
-            </div>
-            <div class="col-sm-4" id="form-style">
-                <input type="number" class="form-control" placeholder="Mobile Contact Person" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="number" class="form-control" name="customerNumber" placeholder="Customer Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-4" id="form-style">
-                <input type="number" class="form-control" placeholder="Company Phone Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="text" class="form-control" name="contactPerson" placeholder="Contact person" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
             <div class="col-sm-4" id="form-style">
-                <input type="email" class="form-control" placeholder="Company Email" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="number" class="form-control" name="phone" placeholder="Phone Contact Person" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
             <div class="col-sm-4" id="form-style">
-                <input type="text" class="form-control" placeholder="Street Adress" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="number" class="form-control" name="mobile" placeholder="Mobile Contact Person" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-4" id="form-style">
-                <input type="number" class="form-control" placeholder="Company Fax Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="number" class="form-control" name="compyPhone" placeholder="Company Phone Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
             <div class="col-sm-4" id="form-style">
-                <input type="text" class="form-control" placeholder="City" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="email" class="form-control" name="email" placeholder="Company Email" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
             <div class="col-sm-4" id="form-style">
-                <input type="text" class="form-control" placeholder="Postcode" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="text" class="form-control" name="streetAddress" placeholder="Street Adress" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4" id="form-style">
+                <input type="number" class="form-control" name="compyFax" placeholder="Company Fax Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+            <div class="col-sm-4" id="form-style">
+                <input type="text" class="form-control" name="city" placeholder="City" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+            </div>
+            <div class="col-sm-4" id="form-style">
+                <input type="text" class="form-control" name="postcode" placeholder="Postcode" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
         </div>
         <div class="row">
             <div class="col-sm-6" id="form-style">
-                <input type="text" class="form-control" placeholder="Country" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
-            </div>
-            <div class="col-sm-6" id="form-style">
-                <input type="text" class="form-control" placeholder="Street Adress" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="text" class="form-control" name="country" placeholder="Country" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
         </div>
         <button type="submit" id="fbutton" style="width:250px; margin-right:45px;"> Add more Contact person</button>

@@ -4,35 +4,89 @@
 }
 
 <div class="container" style="background-color:white; float:right; width:72%; height:auto; border-radius:7%; margin-right:60px;">
-    <form class="form-inline" role="form">
+    <form action="/Admin/AddclientCmpy" method="post" class="form-inline" role="form">
         <h1 style="color:black; font-weight: 700; font-family: Gabriola; text-align: left; font-size: 50px; margin-left: 25px;">List>Company</h1>
         <div class="row">
             <div class="col-sm-4" id="form-style">
-                <input type="number" class="form-control" placeholder="Organization Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="number" id="a" name="orgNo" class="form-control" placeholder="Organization Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
             <div class="col-sm-4" id="form-style">
-                <input type="text" class="form-control" placeholder="Company Name" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="text" id="b" name="companyName" class="form-control" placeholder="Company Name" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
             <div class="col-sm-4" id="form-style">
-                <input type="text" class="form-control" placeholder="Contact Person" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="text" id="c" name="contactPerson" class="form-control" placeholder="Contact Person" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-6" id="form-style">
-                <input type="number" class="form-control" placeholder="CP Phone Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="number" id="d" name="phone" class="form-control" placeholder="CP Phone Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
             <div class="col-sm-6" id="form-style">
-                <input type="email" class="form-control" placeholder="CP Email" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="email" id="e" name="email" class="form-control" placeholder="CP Email" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
         </div>
-
-        <button type="submit" id="fbutton">Search</button>
+        <button id="fbutton" type="button" onclick="find()">Search</button>
     </form>
 </div>
 
+<script>
 
-<div class="container" style="background-color:white; float:right; width:78%; height:auto; border-radius:7%; margin-right:25px;">
+    function find() {
+        var a = $('#a').val().toString();
+        var b = $('#b').val().toString();
+        var c = $('#c').val().toString();
+        var d = $('#d').val().toString();
+        var e = $('#e').val().toString();
+
+        $.getJSON("/Admin/Searchb",
+
+        {
+            a: a,
+            b: b,
+            c: c,
+            d: d,
+            e: e
+
+        },
+         function (data) {
+
+             //                console.log(data);
+             if (data != null) {
+                 var str = " ";
+                 for (var i = 0; i < data.length; i++) {
+                     str += "<tr>";
+                     str += "<td id='r" + i + "'>" + data[i].orgNo + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].companyName + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].customerNumber + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].contactPerson + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].phone + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].mobile + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].compyPhone + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].compyFax + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].email + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].streetAddress + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].postcode + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].city + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].country + "</td>";
+
+                     str += "</tr>";
+                 }
+
+             }
+
+             else if (data == false) {
+                 alert("Sorrry no record");
+             }
+             $('#t12').html(str);
+         });
+
+    };
+</script>
+
+
+
+<div class="container" style="background-color: white; float: right; width: auto; height: auto; border-radius: 7%; margin-left:250px; margin:0 auto;">
 
     <table class="table table-striped">
         <thead>
@@ -51,92 +105,67 @@
                 <th>City</th>
                 <th>Country</th>
                 <th>Action</th>
-               
+
             </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <div class="btn-group">
-                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <span> Action</span>
-                        </button>
-                        <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                            <li>Edit</li>
-                            <li>Delete</li>
-                            <li>Print</li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <div class="btn-group">
-                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <span> Action</span>
-                        </button>
-                        <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                            <li>Edit</li>
-                            <li>Delete</li>
-                            <li>Print</li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <div class="btn-group">
-                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <span> Action</span>
-                        </button>
-                        <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                            <li>Edit</li>
-                            <li>Delete</li>
-                            <li>Print</li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
+            </thead>
+        <tbody id="t12">
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>
+                        @x.orgNo
+                    </td>
+                    <td>
+                        @x.companyName
+                    </td>
+                    <td>
+                        @x.customerNumber
+                    </td>
+                    <td>
+                        @x.contactPerson
+                    </td>
+                    <td>
+                        @x.phone
+                    </td>
+                    <td>
+                        @x.mobile
+                    </td>
+                    <td>
+                        @x.compyPhone
+                    </td>
+                    <td>
+                        @x.compyFax
+                    </td>
+                    <td>
+                        @x.email
+                    </td>
+                    <td>
+                        @x.streetAddress
+                    </td>
+                    <td>
+                        @x.postcode
+                    </td>
+                    <td>
+                        @x.city
+                    </td>
+                    <td>
+                        @x.country
+                    </td>
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span> Action</span>
+                            </button>
+                            <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
+                                <li><a href="/Admin/updateCmpy/@x.Id">Update</a></li>
+                                <li><a href="/Admin/DeleteClientCmpy/@x.Id">Delete</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            }
         </tbody>
+
     </table>
 </div>
 

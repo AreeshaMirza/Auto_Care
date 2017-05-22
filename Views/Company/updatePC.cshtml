@@ -1,0 +1,61 @@
+﻿@model AC_Car_Service_.Models.NewOrderCmpy
+@{
+    ViewBag.Title = "updatePC";
+    Layout = "~/Views/Shared/_LayoutCompany.cshtml";
+}
+
+<div class="container" style="background-color:white; float:right; width:72%; height:auto; border-radius:7%; margin-right:60px;">
+    <form action="/Company/upDatePCompy/@Model.Id" method="post">
+        <div class="row">
+            <div class="col-md-4" id="form-style">
+                <input id="licensePlate" name="licensePlate" type="text" class="form-control" placeholder="License Plate" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.licensePlate" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="chassiNo" name="chassiNo" type="text" class="form-control" placeholder="Chassi Number" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.chassiNo" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="companyList" name="companyList" type="text" class="form-control" placeholder="Company List" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.companyList" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" id="form-style">
+                <input id="contactPerson" name="contactPerson" type="text" class="form-control" placeholder="Contact Person" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.contactPerson" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="serviceCategory" name="serviceCategory" type="text" class="form-control" placeholder="Service Category" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.serviceCategory" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="service" name="service" type="text" class="form-control" placeholder="Service(s)" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.service" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" id="form-style">
+                <input id="choosenService" name="choosenService" type="text" class="form-control" placeholder="Choosen Service" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.choosenService" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="orderDescription" name="orderDescription" type="text" class="form-control" placeholder="orderDescription" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.orderDescription" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <select class="form-control" id="status" name="status" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.status">
+                    <option>Status</option>
+                    <option value="Open">Open</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Finish">Finish</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="form-style">
+                <input id="dateTime" name="dateTime" type="text" class="form-control" placeholder="Date&Time" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.dateTime" />
+            </div>
+            <div class="col-md-6" id="form-style">
+                <input id="User" name="User" type="text" class="form-control" placeholder="User" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="@Model.User" />
+            </div>
+        </div>
+
+        <input type="submit" id="fbutton" value="Update" />
+
+
+    </form>
+</div>
+

@@ -4,42 +4,90 @@
 }
 
 <div class="container" style="background-color:white; float:right; width:74%; height:auto; border-radius:7%; margin-right:50px;">
-    <form class="form-inline" role="form">
+    <form action="/Admin/AddservicePvt" method="post" class="form-inline" role="form">
         <h1 style="color:black; font-weight:700; font-family:Gabriola; text-align:left; font-size:50px; margin-left:25px;">List>Private</h1>
         <div class="row">
             <div class="col-sm-4" id="form-style">
-                <select class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
-                    <option value="Company name">Category</option>
-                    <option value="Company name">1</option>
-                    <option value="Company name">2</option>
-                    <option value="Company name">3</option>
+                <select class="form-control" id="a" name="chooseCategory" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                    <option value="Category">Category</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                 </select>
             </div>
             <div class="col-sm-4" id="form-style">
-                <select class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
-                    <option value="Company name">Service Type</option>
-                    <option value="Company name">1</option>
-                    <option value="Company name">2</option>
-                    <option value="Company name">3</option>
+                <select class="form-control" id="b" name="chooseServiceType" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                    <option value="Service Type">Service Type</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                 </select>
             </div>
             <div class="col-sm-4" id="form-style">
-                <input type="text" class="form-control" placeholder="Service Name" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="text" id="c" class="form-control" name="serviceName" placeholder="Service Name" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-6" id="form-style">
-                <input type="number" class="form-control" placeholder="Price(Ex VAT)" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="number" id="d" class="form-control" name="priceVAT" placeholder="Price(Ex VAT)" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
             <div class="col-sm-6" id="form-style">
-                <input type="number" class="form-control" placeholder="Price(Inc VAT)" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="number"  id="e" class="form-control" name="priceInc" placeholder="Price(Inc VAT)" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
         </div>
+        <button id="fbutton" type="button" onclick="find()">Search</button>
 
-        <button type="submit" id="fbutton">Search</button>
     </form>
 </div>
+
+<script>
+
+    function find() {
+        var a = $('#a').val().toString();
+        var b = $('#b').val().toString();
+        var c = $('#c').val().toString();
+        var d = $('#d').val().toString();
+        var e = $('#e').val().toString();
+
+        $.getJSON("/Admin/Searchc",
+
+        {
+            a: a,
+            b: b,
+            c: c,
+            d: d,
+            e: e
+
+        },
+         function (data) {
+
+             //                console.log(data);
+             if (data != null) {
+                 var str = " ";
+                 for (var i = 0; i < data.length; i++) {
+                     str += "<tr>";
+                     str += "<td id='r" + i + "'>" + data[i].chooseCatregory + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].chooseServiceType + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].serviceName + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].priceVAT + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].priceInc + "</td>";
+
+                     str += "</tr>";
+                 }
+
+             }
+
+             else if (data == false) {
+                 alert("Sorrry no record");
+             }
+             $('#t12').html(str);
+         });
+
+    };
+</script>
+
+
 
 <div class="container" style="background-color:white; float:right; width:74%; height:auto; border-radius:7%; margin-right:50px;">
 
@@ -53,84 +101,39 @@
                 <th>Price (Inc VAT)</th>
                 <th>Action</th>
             </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <div class="btn-group">
-                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <span> Action</span>
-                        </button>
-                        <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                            <li>Edit</li>
-                            <li>Delete</li>
-                            <li>Print</li>
-                        </ul>
-                    </div> 
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <div class="btn-group">
-                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <span> Action</span>
-                        </button>
-                        <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                            <li>Edit</li>
-                            <li>Delete</li>
-                            <li>Print</li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <div class="btn-group">
-                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <span> Action</span>
-                        </button>
-                        <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                            <li>Edit</li>
-                            <li>Delete</li>
-                            <li>Print</li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <div class="btn-group">
-                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <span> Action</span>
-                        </button>
-                        <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                            <li>Edit</li>
-                            <li>Delete</li>
-                            <li>Print</li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
+            </thead>
+        <tbody id="t12">
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>
+                        @x.chooseCategory
+                    </td>
+                    <td>
+                        @x.chooseServiceType
+                    </td>
+                    <td>
+                        @x.serviceName
+                    </td>
+                    <td>
+                        @x.priceVAT
+                    </td>
+                    <td>
+                        @x.priceInc
+                    </td>
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span> Action</span>
+                            </button>
+                            <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
+                                <li><a href="/Admin/updateSerPvt/@x.Id">Update</a></li>
+                                <li><a href="/Admin/DeleteServicePvt/@x.Id">Delete</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            }
         </tbody>
     </table>
 </div>

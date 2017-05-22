@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Invoice_private";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container" style="background-color:white; float:right; width:72%; height:auto; border-radius:7%; margin-right:60px;">
+    <form action="" method="post">
+        <div class="row">
+            <div class="col-md-4" id="form-style">
+                <input id="InvoiceNo" name="InvoiceNo" type="text" class="form-control" placeholder="InvoiceNo" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="OrderNo" name="OrderNo" type="text" class="form-control" value="@Model.Id" placeholder="OrderNo" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="OCR" name="OCR" type="text" class="form-control" placeholder="OCR" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" id="form-style">
+                <input id="InvoiceDate" name="InvoiceDate" type="text" class="form-control" placeholder="InvoiceDate" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="ExpDate" name="ExpDate" type="text" class="form-control" placeholder="ExpDate" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="OurRefernce" name="OurRefernce" type="text" class="form-control" placeholder="OurRefernce" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" id="form-style">
+                <input id="InterestRate" name="InterestRate" type="text" class="form-control" placeholder="InterestRate" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="RemainderFee" name="RemainderFee" type="text" class="form-control" placeholder="RemainderFee" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="" />
+            </div>
+            <div class="col-md-4" id="form-style">
+                <input id="UserName" name="UserName" type="text" class="form-control" placeholder="UserName" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="form-style">
+                <input id="Status" name="Status" type="text" class="form-control" placeholder="Status" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="" />
+            </div>
+        </div>
+
+        <input type="submit" id="fbutton" value="Create My Invoice" style="width:200px;" />
+
+
+    </form>
+</div>
+

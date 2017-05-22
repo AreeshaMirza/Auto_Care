@@ -822,7 +822,7 @@
                 <div class="col-sm-6">
                     <a href="/Admin/SellPurchase">
                         <h3 style="font-family: gabriola; font-size: 20px; color: #12A8F1; margin-right: -50px;">
-                            <span class="glyphicon glyphicon-chevron-right">Back</span>
+                            <span class="glyphicon glyphicon-chevron-left">Back</span>
                         </h3>
                     </a>
 
@@ -843,10 +843,10 @@
                 <div class="Regisration-head">
                     <h2 style="color: #12A8F1;">Submit an Ad</h2>
                 </div>
-                <form action="action_page.php" style=" max-width: 500px; padding: 15px; margin: 0 auto;  border-radius: 0.3em;">
+                <form action="/Admin/Addad" method="post" style=" max-width: 500px; padding: 15px; margin: 0 auto;  border-radius: 0.3em;">
 
-                    <input type="text" value="AdTitle" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Ad title';}">
-                    <textarea required rows="10" cols="35" id="n1" maxlength="999" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Description';}">Description</textarea>
+                    <input type="text" value="AdTitle" name="Title" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Ad title';}">
+                    <textarea required name="Description" rows="10" cols="35" id="n1" maxlength="999" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Description';}">Description</textarea>
                     <div id="n1" style="margin-left:65px;">
                         <label style="color:gray;margin-right:200px;">Upload Photos</label>
                         <input type='file' onchange="readURL(this);" style="margin-left:10px; color:gray;" />
@@ -856,15 +856,15 @@
                         <input type='file' onchange="readURL2(this);" style="margin-left:10px; color:gray;" />
                         <img id="blahhh" src="#" alt="your image" />
                     </div>
-                    <input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-                    
-                    <input type="number" value="Phone number" placeholder="Phone number" required id="n1" onblur="if (this.value == '') {this.value = 'Phone number';}">
-                    
+                    <input type="text" value="Name" name="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+
+                    <input type="number" name="phoneNo" value="Phone number" placeholder="Phone number" required id="n1" onblur="if (this.value == '') {this.value = 'Phone number';}">
+
 
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <select id="opts" onchange="showForm1()" class="n2">
+                                <select id="opts" onchange="showForm1()" class="n2" name="Proviences">
                                     <option>Province</option>
                                     <option value="Azad Kashmir">Azad Kashmir</option>
                                     <option value="Balochistan">Balochistan</option>
@@ -1024,7 +1024,7 @@
                                         str1 += "</div>";
                                         $('#show_orts').html(str1);
                                     }
-                                    
+
                                     else {
                                         alert("Sorrry no record");
                                     }
@@ -1032,21 +1032,21 @@
                             </script>
                         </div>
                     </div>
-                    
 
-                            <div class="Remember-me">
-                                <div class="p-container">
-                                    <label style="color:white; font-size:13px;"><input type="checkbox">I Agree to the Terms and Conditions</label>
 
-                                    <div class="clear"></div>
-                                </div>
+                    <div class="Remember-me">
+                        <div class="p-container">
+                            <label style="color:white; font-size:13px;"><input type="checkbox">I Agree to the Terms and Conditions</label>
 
-                                <button type="submit" id="button" onclick="myFunction()">Submit</button>
+                            <div class="clear"></div>
+                        </div>
+                        <input type="submit" value="Submit" id="button" onclick="myFunction()">
 
-                                <div class="clear"> </div>
-                            </div>
+                        <div class="clear"> </div>
+                    </div>
 
-                        </form>
+                </form>
+
                     </div>
                 </div>
             </div>

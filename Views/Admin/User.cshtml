@@ -8,9 +8,10 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>User Name</th>
                 <th>PIN</th>
+                <th>Re-enter PIN</th>
+                <th>Email</th>
                 <th>First Name</th>
                 <th>Sur Name</th>
                 <th>Role</th>
@@ -18,69 +19,46 @@
                 <th>Measure</th>
 
             </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <div class="btn-group">
-                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <span>Measurement</span>
-                        </button>
-                        <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                            <li>Edit</li>
-                            <li>Delete</li>
-                        </ul>
-                    </div>
-                </td>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>
+                        @x.userName
+                    </td>
+                    <td>
+                        @x.PIN
+                    </td>
+                    <td>
+                        @x.re_enter
+                    </td>
+                    <td>
+                        @x.email
+                    </td>
+                    <td>
+                        @x.firstName
+                    </td>
+                    <td>
+                        @x.surName
+                    </td>
+                    <td>
+                        @x.role
+                    </td>
+                    <td>
+                        @x.type
+                    </td>
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span>Action</span>
+                            </button>
+                            <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
+                                <li><a href="/Admin/DeleteLogin/@x.Id">Delete</a></li>
+                            </ul>
+                        </div>
+                    </td>
 
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <div class="btn-group">
-                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <span>Measurement</span>
-                        </button>
-                        <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                            <li>Edit</li>
-                            <li>Delete</li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <div class="btn-group">
-                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <span>Measurement</span>
-                        </button>
-                        <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                            <li>Edit</li>
-                            <li>Delete</li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                </tr>
+            }
+        </thead>
+       </table>
 </div>
