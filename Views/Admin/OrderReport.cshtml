@@ -34,6 +34,7 @@
                         <option value="Deck">Deck</option>
                         <option value="Service">Service</option>
                         <option value="Inspection">Inspection</option>
+                        <option value="Paint">Paint</option>
                     </select>
                 </div>
             </div>
@@ -59,21 +60,18 @@
 
                 },
                  function (data) {
-                   alert(data)
-                            console.log(data);
+
+                   console.log(data);
                      if (data != null) {
                          var str = " ";
                          for (var i = 0; i < data.length; i++) {
-                             var dat1123 = data[i].date;
-                             var sdate1123 = new Date(parseInt(dat1123.substr(6)));
                              str += "<tr>";
                              str += "<td id='r" + i + "'>" + data[i].Id + "</td>";
-                             str += "<td id='r" + i + "'>" + sdate1123 + "</td>";
+                             str += "<td id='r" + i + "'>" + data[i].dateTime + "</td>";
                              str += "<td id='r" + i + "'>" + data[i].licensePlate + "</td>";
                              str += "<td id='r" + i + "'>" + data[i].chassiNo + "</td>";
                              str += "<td id='r" + i + "'>" + clitype + "</td>";
                              str += "<td id='r" + i + "'>" + data[i].z[0].priceVAT + "</td>";
-
                              str += "</tr>";
                          }
 
