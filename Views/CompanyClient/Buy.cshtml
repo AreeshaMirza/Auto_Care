@@ -758,7 +758,7 @@
                 <div class="col-sm-6">
                     <a href="/CompanyClient/SellPurchase">
                         <h3 style="font-family: gabriola; font-size: 20px; color: #12A8F1; margin-right: -50px;">
-                            <span class="glyphicon glyphicon-chevron-right">Back</span>
+                            <span class="glyphicon glyphicon-chevron-left">Back</span>
                         </h3>
                     </a>
 
@@ -781,17 +781,17 @@
                 </div>
                 <form action="/CompanyClient/AddOC" method="post" style=" max-width: 500px; padding: 15px; margin: 0 auto;  border-radius: 0.3em;">
 
-                    <input type="text" value=" Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = ' Name';}">
+                    <input type="text" name="Name" value=" Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = ' Name';}">
 
-                    <input type="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
-                    <input type="number" value="Phone number" placeholder="Phone number" required id="n1" onblur="if (this.value == '') {this.value = 'Phone number';}">
+                    <input type="text" name="Email" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
+                    <input type="number" name="phoneNo" value="Phone number" placeholder="Phone number" required id="n1" onblur="if (this.value == '') {this.value = 'Phone number';}">
 
-                    <input type="text" value="Car model" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'car model';}">
-                    <input type="text" value=" Color" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = ' color';}">
+                    <input type="text" name="carModel" value="Car model" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'car model';}">
+                    <input type="text" name="carColor" value=" Color" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = ' color';}">
 
                     <div class="Remember-me">
                         <div class="p-container">
-                            <label style="color:white; font-size:13px;"><input type="checkbox">I Agree to the Terms and Conditions</label>
+                            <label style="color:white; font-size:13px;"><input type="checkbox" required>I Agree to the Terms and Conditions</label>
 
                             <div class="clear"></div>
                         </div>

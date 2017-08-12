@@ -3,9 +3,9 @@
     Layout = "~/Views/Shared/_LayoutClientPvt.cshtml";
 }
 
-<div class="container" style="background-color:white; float:right; width:auto; height:auto; border-radius:7%; margin-left:800px;">
+<div class="container-fluid  " style="background-color: white; overflow-y: auto; overflow-x: auto; height: 80%; width:55%; margin-left:33%; border-radius: 7%;">
     <h1 style="color:black; font-weight:700; font-family:Gabriola; text-align:left; margin-left:10px; font-size:50px;">Finish Order>Private</h1>
-    <table class="table table-striped" cellspacing="0">
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>License Plate</th>
@@ -81,7 +81,7 @@
                             <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
                                 <li><a href="/PrivateClient/updateFO/@x.Id">Update</a></li>
                                 <li><a href="/PrivateClient/DeleteFP/@x.Id">Delete</a></li>
-                                <li><a href="/PrivateClient/InvicePvt/@x.Id">Invoice</a></li>
+                                <li><a href="/PrivateClient/Invoice_private/@x.Id">Invoice</a></li>
                             </ul>
                         </div>
                     </td>
@@ -91,3 +91,5 @@
         </thead>
     </table>
 </div>
+
+

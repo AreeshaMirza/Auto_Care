@@ -5,19 +5,19 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="2c2c8efb1b5743b385c33f5b1c226450" Name="Diagram1" ZoomLevel="74">
-        <EntityTypeShape EntityType="Database1Model.BuyNewCar" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="Database1Model.BuyOldCar" Width="1.5" PointX="2.75" PointY="2.625" />
-        <EntityTypeShape EntityType="Database1Model.clientCompany" Width="1.5" PointX="4.75" PointY="0.75" />
-        <EntityTypeShape EntityType="Database1Model.clientPrivate" Width="1.5" PointX="0.75" PointY="3.375" />
-        <EntityTypeShape EntityType="Database1Model.companyService" Width="1.5" PointX="6.75" PointY="0.75" />
-        <EntityTypeShape EntityType="Database1Model.feebdback" Width="1.5" PointX="4.75" PointY="4.625" />
-        <EntityTypeShape EntityType="Database1Model.InovicePvt" Width="1.5" PointX="6.75" PointY="3.5" />
-        <EntityTypeShape EntityType="Database1Model.InvoiceCmpy" Width="1.5" PointX="8.75" PointY="0.75" />
-        <EntityTypeShape EntityType="Database1Model.NewOrderCmpy" Width="1.5" PointX="10.75" PointY="3.125" />
-        <EntityTypeShape EntityType="Database1Model.NewOrderPvt" Width="1.5" PointX="8.75" PointY="4.75" />
-        <EntityTypeShape EntityType="Database1Model.privateService" Width="1.5" PointX="10.75" PointY="0.75" />
-        <EntityTypeShape EntityType="Database1Model.User" Width="1.5" PointX="2.75" PointY="4.875" />
         <EntityTypeShape EntityType="Database1Model.Add" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Database1Model.BuyNewCar" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Database1Model.BuyOldCar" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Database1Model.clientCompany" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Database1Model.clientPrivate" Width="1.5" PointX="4.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Database1Model.companyService" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Database1Model.feebdback" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Database1Model.InovicePvt" Width="1.5" PointX="6.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Database1Model.InvoiceCmpy" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Database1Model.NewOrderCmpy" Width="1.5" PointX="8.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Database1Model.NewOrderPvt" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Database1Model.privateService" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Database1Model.User" Width="1.5" PointX="2.75" PointY="10.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

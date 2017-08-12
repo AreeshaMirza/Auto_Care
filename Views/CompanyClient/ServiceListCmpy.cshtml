@@ -10,9 +10,9 @@
             <div class="col-sm-4" id="form-style">
                 <select class="form-control" id="a" name="chooseCategory" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
                     <option value="Category">Category</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+                    <option value="1">Wash</option>
+                    <option value="2">Paint</option>
+                    <option value="3">Repair</option>
                 </select>
             </div>
             <div class="col-sm-4" id="form-style">
@@ -91,7 +91,7 @@
 
 
 
-<div class="container" style="background-color:white; float:right; width:74%; height:auto; border-radius:7%; margin-right:50px;">
+<div class="container-fluid  " style="background-color: white; overflow-y: auto; overflow-x: auto; height: 80%; width:73%; margin-left:23%; border-radius: 7%;">
 
     <table class="table table-striped">
         <thead>
@@ -120,7 +120,7 @@
                         @x.serviceName
                     </td>
                     <td>
-                        @x.priceEX
+                        @x.priceVAT
                     </td>
                     <td>
                         @x.priceInc

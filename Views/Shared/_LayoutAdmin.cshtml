@@ -56,7 +56,7 @@
                     <div class="collapse navbar-collapse" id="myNavbar" style="background-color:black;">
                         <div class="dropdown pull-right" style="margin-top:17px; margin-right:20px; background-color:black; border-color:black; border-style:ridge;">
                             <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: black; border-color: black; border-style: ridge;">
-                                <p style="color:#12A8F1;" class="glyphicon glyphicon-user">User</p>
+                                <p style="color:#12A8F1;" class="glyphicon glyphicon-user"><span> @Session["username"]</span></p>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dLabel">
                                 <ul>
@@ -145,7 +145,6 @@
                         <li class="dropdown-header"><b></b></li>
                         <li><a href="/Admin/MyInvoice">Private Invoice</a></li>
                         <li><a href="/Admin/MyInvoiceCmpy">Company Invoice</a></li>
-                        <li><a href="/Admin/NewInvoice">Create New Invoice</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -154,6 +153,7 @@
                         <li class="dropdown-header"></li>
                         <li><a href="/Admin/SellPurchase">New Cars</a></li>
                         <li><a href="/Admin/SellPurchaseOld">Old Cars</a></li>
+                        <li><a href="/Admin/Check_Add">Check Advertised Cars</a></li>
                     </ul>
                 </li>
 

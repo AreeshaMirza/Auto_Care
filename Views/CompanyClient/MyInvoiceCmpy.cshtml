@@ -1,17 +1,17 @@
 ﻿@{
-    ViewBag.Title = "MyInvoice";
-    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "MyInvoiceCmpy";
+    Layout = "~/Views/Shared/_LayoutClientCmpny.cshtml";
 }
 
-<div class="container" style="background-color: white; width: 72%; float: right; margin-right: 70px; height: auto; border-radius: 7%; margin-left: 160px;">
+<div class="container" style="background-color:white; width: 72%; float: right; margin-right: 70px; height: auto; border-radius: 7%; margin-left: 160px;">
     <form class="form-inline" role="form">
-        <h1 style="color: black; font-weight: 700; font-family: Gabriola; text-align: left; font-size: 50px; margin-left: 25px;">Private Invoice</h1>
+        <h1 style="color:black; font-weight:700; font-family:Gabriola; text-align:left; font-size:50px; margin-left:25px;">Company Invoice</h1>
         <div class="row">
             <div class="col-sm-6" id="form-style" style="margin-left:120px;">
                 <input type="date" id="a" class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
             <div class="col-sm-6" id="form-style" style="margin-left:100px;">
-                <input type="date" id="b" class="form-control" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <input type="date" class="form-control" id="b" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
         </div>
 
@@ -26,7 +26,7 @@
         var b = $('#b').val().toString();
 
 
-        $.getJSON("/Admin/SearchInvoicePvt",
+        $.getJSON("/CompanyClient/SearchInvoiceCmpy",
 
         {
             a: a,
@@ -41,14 +41,18 @@
                  for (var i = 0; i < data.length; i++) {
                      str += "<tr>";
                      str += "<td id='r" + i + "'>" + data[i].InvoiceNo + "</td>";
-                     str += "<td id='r" + i + "'>" + data[i].OrderNo + "</td>";
-                     str += "<td id='r" + i + "'>" + data[i].OCR + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].CmpyNo + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].OrdersFrom + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].OrderTo + "</td>";
                      str += "<td id='r" + i + "'>" + data[i].InvoiceDate + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].OCR + "</td>";
                      str += "<td id='r" + i + "'>" + data[i].ExpDate + "</td>";
-                     str += "<td id='r" + i + "'>" + data[i].OurRefernce + "</td>";
-                     str += "<td id='r" + i + "'>" + data[i].InterestRate + "</td>";
-                     str += "<td id='r" + i + "'>" + data[i].RemainderFee + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].OurReference + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].ContactPerson + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].Interest + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].ReminderFee + "</td>";
                      str += "<td id='r" + i + "'>" + data[i].UserName + "</td>";
+                     str += "<td id='r" + i + "'>" + data[i].OrderNo + "</td>";
                      str += "<td id='r" + i + "'>" + data[i].Status + "</td>";
 
                      str += "</tr>";
@@ -72,18 +76,20 @@
             <thead>
                 <tr>
                     <th>Invoice Number</th>
-                    <th>Order Number</th>
-                    <th>OCR</th>
+                    <th>Company Number</th>
+                    <th>Order From</th>
+                    <th>Order To</th>
                     <th>Invoice Date</th>
-                    <th>Exp Date</th>
+                    <th>OCR</th>
+                    <th>Expire Date</th>
                     <th>Our Reference</th>
-                    <th>Interset Rate</th>
+                    <th>Contact Person</th>
+                    <th>Interest</th>
                     <th>Remainder Fee</th>
                     <th>User Name</th>
+                    <th>Order Number</th>
                     <th>Status</th>
                     <th>Measurement</th>
-                </tr>
-            </thead>
             <tbody id="t12">
                 @foreach (var x in Model)
                 {
@@ -92,28 +98,40 @@
                             @x.InvoiceNo
                         </td>
                         <td>
-                            @x.OrderNo
+                            @x.CmpyNo
                         </td>
                         <td>
-                            @x.OCR
+                            @x.OrdersFrom
+                        </td>
+                        <td>
+                            @x.OrderTo
                         </td>
                         <td>
                             @x.InvoiceDate
                         </td>
                         <td>
+                            @x.OCR
+                        </td>
+                        <td>
                             @x.ExpDate
                         </td>
                         <td>
-                            @x.OurRefernce
+                            @x.OurReference
                         </td>
                         <td>
-                            @x.InterestRate
+                            @x.ContactPerson
                         </td>
                         <td>
-                            @x.RemainderFee
+                            @x.Interest
+                        </td>
+                        <td>
+                            @x.ReminderFee
                         </td>
                         <td>
                             @x.UserName
+                        </td>
+                        <td>
+                            @x.OrderNo
                         </td>
                         <td>
                             @x.Status
@@ -124,8 +142,8 @@
                                     <span>Measurement</span>
                                 </button>
                                 <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                                    <li><a href="/Admin/updateInvoicePvt/@x.Id">Update</a></li>
-                                    <li><a href="/Admin/DeleteInvoicePvt/@x.Id">Delete</a></li>
+                                    <li><a href="/CompanyClient/updateInvoiceCmpy/@x.Id">Update</a></li>
+                                    <li><a href="/CompanyClient/DeleteInvoiceCmpy/@x.Id">Delete</a></li>
                                 </ul>
                             </div>
                         </td>
@@ -147,3 +165,7 @@
         }
     </script>
 </div>
+
+
+
+

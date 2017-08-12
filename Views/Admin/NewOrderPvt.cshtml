@@ -3,8 +3,8 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<div class="container" style="background-color:white; border-radius:7em; float:right; width:74%; height:auto;  margin-right:50px;">
-    <form action="/Admin/AddPvt" method="post" class="form-inline" role="form">
+<div class="container" style="background-color:white; border-radius:7em; float:right; width:74%; height:auto;  margin-right:50px; margin-bottom:10px;">
+    <form action="/Admin/NewOrderPvt_save" method="post" class="form-inline" role="form">
         <h1 style="color:black; font-weight:700; font-family:Gabriola; text-align:left; margin-left:25px; font-size:50px;">New Order>Private</h1>
         <div class="row">
             <div class="col-sm-4" id="form-style">
@@ -50,7 +50,7 @@
                 <input type="text" class="form-control" name="city" placeholder="City" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
             </div>
             <div class="col-sm-4" id="form-style">
-                 <select class="form-control" name="serviceCategory" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
+                <select class="form-control" name="serviceCategory" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;">
                     <option value="Service Category">Service Category</option>
                     <option value="Wash Services">Wash Services</option>
                     <option value="Lacque">Lacquer</option>
@@ -76,8 +76,11 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12" id="form-style">
-                <textarea class="form-control" name="orderDescription" placeholder="Order description" required style="margin-left: 12%; width: 900px; height: 80px; border-width: 2px; border-color: #12A8F1;"></textarea>
+            <div class="comment-text-area col-sm-12">
+                <textarea class="textinput" name="orderDescription" placeholder="Order Description" style="margin-left:2%;
+  width:80%;
+  height:80px;
+ border-width: 2px; border-color: #12A8F1;"></textarea>
             </div>
         </div>
         <input type="submit" value="Save Order" class="btn btn-primary" id="fbutton" />

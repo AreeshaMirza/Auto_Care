@@ -17,7 +17,7 @@
     <link href="~/css/simple-sidebar.css" rel="stylesheet" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
-<body>
+<body style="background-color:whitesmoke;">
 
     <nav class="navbar navbar-inverse">
         <div class="container-fulid">
@@ -43,13 +43,13 @@
 
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar" style="background-color:black;">
-                        <div class="dropdown pull-right" style="margin-top:17px; margin-right:20px; background-color:black;">
-                            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:black;">
-                                <p style="color:white;" class="glyphicon glyphicon-user">&nbsp;User</p>
+                        <div class="dropdown pull-right" style="margin-top:17px; margin-right:20px; background-color:black; border-color:black; border-style:ridge;">
+                            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: black; border-color: black; border-style: ridge;">
+                                <p style="color:#12A8F1;" class="glyphicon glyphicon-user"> @Session["username"]</p>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dLabel">
                                 <ul>
-                                    <li><a href="/Admin/Profile" style="color:black;">Profile</a></li>
+                                    <li><a href="/PrivateClient/Profile" style="color:black;">Profile</a></li>
                                     <li><a href="/Home/AutoCare" style="color:black;">Sign out</a></li>
                                 </ul>
                             </div>
@@ -80,77 +80,43 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart">&nbsp;NewOrder</span><span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#"></a></li>
-                        <li><a href="/Admin/NewOrderPvt">Private</a></li>
-                        <li><a href="/Admin/NewOrdercmpy">Company</a></li>
-
+                        <li><a href="/PrivateClient/NewOrderPvt">Private</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-edit">&nbsp;Orders</i><span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li class="dropdown-header"><span class="glyphicon glyphicon-arrow-right">Open Order</span></li>
-                        <li><a href="/Admin/OpenOrderPvt">Private</a></li>
-                        <li><a href="/Admin/OpenOrderCmpy">Company</a></li>
+                        <li><a href="/PrivateClient/OpenOrderPvt">Private</a></li>
                         <li class="dropdown-header"><span class="glyphicon glyphicon-arrow-right">Pending Order</span></li>
-                        <li><a href="/Admin/PendingOrderPvt">Private</a></li>
-                        <li><a href="/Admin/PendingOrderCmpy">Company</a></li>
+                        <li><a href="/PrivateClient/PendingOrderPvt">Private</a></li>
                         <li class="dropdown-header"><span class="glyphicon glyphicon-arrow-right">Finish Order</span></li>
-                        <li><a href="/Admin/FinishOrderPvt">Private</a></li>
-                        <li><a href="/Admin/FinishOrderCmpy">Company</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-edit">&nbsp;Client</i><span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li class="dropdown-header"><span class="glyphicon glyphicon-arrow-right">Add New</span></li>
-                        <li><a href="/Admin/PrivateClient">Private</a></li>
-                        <li><a href="/Admin/CompanyClient">Company</a></li>
-                        <li class="dropdown-header"><span class="glyphicon glyphicon-arrow-right">List</span></li>
-                        <li><a href="/Admin/ClientListPvt">Private</a></li>
-                        <li><a href="/Admin/ClientListCmpy">Company</a></li>
+                        <li><a href="/PrivateClient/FinishOrderPvt">Private</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-edit">&nbsp;Services</i><span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li class="dropdown-header"><span class="glyphicon glyphicon-arrow-right">Add Service Package</span></li>
-                        <li><a href="/Admin/PrivateService">Private</a></li>
-                        <li><a href="/Admin/CompanyService">Company</a></li>
+                        <li><a href="/PrivateClient/PrivateService">Private</a></li>
                         <li class="dropdown-header"><span class="glyphicon glyphicon-arrow-right">List</span></li>
-                        <li><a href="/Admin/ServiceListPvt">Private</a></li>
-                        <li><a href="/Admin/ServiceListCmpy">Company</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-edit">&nbsp;Reports</i><span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#"></a></li>
-                        <li><a href="/Admin/OrderReport">Order Report</a></li>
+                        <li><a href="/PrivateClient/ServiceListPvt">Private</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-edit">&nbsp;Invoice</i><span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li class="dropdown-header"><b></b></li>
-                        <li><a href="/Admin/MyInvoice">Private Invoice</a></li>
-                        <li><a href="/Admin/MyInvoiceCmpy">Company Invoice</a></li>
-                        <li><a href="/Admin/NewInvoice">Create New Invoice</a></li>
+                        <li><a href="/PrivateClient/MyInvoice">Private Invoice</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart">&nbsp;Sell&Purchase</span><span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li class="dropdown-header"></li>
-                        <li><a href="/Admin/SellPurchase">New Cars</a></li>
-                        <li><a href="/Admin/SellPurchaseOld">Old Cars</a></li>
+                        <li><a href="/PrivateClient/SellPurchase">New Cars</a></li>
+                        <li><a href="/PrivateClient/SellPurchaseOld">Old Cars</a></li>
                     </ul>
-                </li>
-
-                <li>
-                    <a href="/Admin/User"><span class="glyphicon glyphicon-user">&nbsp;User</span></a>
-                </li>
-                <li>
-                    <a href="/Admin/Feedback"><span class="glyphicon glyphicon-envelope">&nbsp;Feedback</span></a>
                 </li>
             </ul>
         </nav>
@@ -201,21 +167,7 @@
             @RenderBody()
         </div>
 
-        <div class="navbar navbar-fixed-bottom" style="background-color: rgba(8, 8, 8, 0.73);">
-            <div class="container" style="background-color: rgba(8, 8, 8, 0.73);">
-                <p class="navbar-text pull-left">
-                    © 2017 - Auto Care.
-                    <a href="http://tinyurl.com/tbvalid" target="_blank">Terms & Conditions</a>
-                </p>
-                <ul class="social-icon animate pull-right" style="margin-right: -80px; margin-top: 10px;">
-                    <li><a href="#" title="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li> <!-- change the link to social page and edit title-->
-                    <li><a href="#" title="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#" title="google plus" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                </ul>
-            </div>
-
-
-        </div>
+       
 
 
 </body>

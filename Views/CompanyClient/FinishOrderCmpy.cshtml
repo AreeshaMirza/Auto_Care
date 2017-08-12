@@ -3,7 +3,7 @@
     Layout = "~/Views/Shared/_LayoutClientCmpny.cshtml";
 }
 
-<div class="container" style="background-color:white; float:right; width:72%; height:auto; border-radius:7%; margin-right:70px;">
+<div class="container-fluid  " style="background-color: white; overflow-y: auto; overflow-x: auto; height: 80%; width:55%; margin-left:33%; border-radius: 7%;">
     <h1 style="color:black; font-weight:700; font-family:Gabriola; text-align:left; margin-left:10px; font-size:50px;">Fininsh Order>Company</h1>
     <table class="table table-striped">
         <thead>
@@ -53,7 +53,7 @@
                             <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
                                 <li><a href="/CompanyClient/updateFC/@x.Id">Update</a></li>
                                 <li><a href="/CompanyClient/DeleteCmpyFinish/@x.Id">Delete</a></li>
-                                <li><a href="/CompanyClient/InviceCmpy/@x.Id">Invoice</a></li>
+                                <li><a href="/CompanyClient/Invoice_company/@x.Id">Invoice</a></li>
                             </ul>
                         </div>
                     </td>

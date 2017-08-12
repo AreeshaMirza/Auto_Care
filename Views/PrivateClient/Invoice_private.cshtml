@@ -1,11 +1,11 @@
 ﻿@model AC_Car_Service_.Models.NewOrderPvt
 @{
     ViewBag.Title = "Invoice_private";
-    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    Layout = "~/Views/Shared/_LayoutClientPvt.cshtml";
 }
 
 <div class="container" style="background-color:white; float:right; width:72%; height:auto; border-radius:7%; margin-right:60px;">
-    <form action="/Admin/SaveInovicepvt1" method="post">
+    <form action="/PrivateClient/SaveInovicepvt1" method="post">
         <div class="row">
             <div class="col-md-4" id="form-style">
                 <input id="InvoiceNo" name="InvoiceNo" type="text" class="form-control" placeholder="Invoice No" required style="margin-left: 12%; width: 90%; height: 45px; border-width: 2px; border-color: #12A8F1;" value="" />

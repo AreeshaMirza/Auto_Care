@@ -3,90 +3,95 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<div class="container" style="background-color:white; float:right; width:auto; height:auto; border-radius:7%; margin-left:250px;">
-    <h1 style="color:black; font-weight:700; font-family:Gabriola; text-align:left; margin-left:10px; font-size:50px;">Pending Order>Private</h1>
-    <table id="example" class="display nowrap" cellspacing="0">
-        <thead>
-            <tr>
-                <th>License Plate</th>
-                <th>Chassi Number</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Phone No</th>
-                <th>Mobile</th>
-                <th>Email</th>
-                <th>Street Address</th>
-                <th>Postcode</th>
-                <th>City</th>
-                <th>Country</th>
-                <th>Service Category</th>
-                <th>Service</th>
-                <th>Choosen Service</th>
-                <th>Order Description</th>
-                <th>Action</th>
-            </tr>
-            @foreach (var x in Model)
-            {
-                <tr>
-                    <td>
-                        @x.licensePlate
-                    </td>
-                    <td>
-                        @x.chassiNo
-                    </td>
-                    <td>
-                        @x.firstName
-                    </td>
-                    <td>
-                        @x.lastName
-                    </td>
-                    <td>
-                        @x.phoneNo
-                    </td>
-                    <td>
-                        @x.mobile
-                    </td>
-                    <td>
-                        @x.email
-                    </td>
-                    <td>
-                        @x.streetAddress
-                    </td>
-                    <td>
-                        @x.postcode
-                    </td>
-                    <td>
-                        @x.city
-                    </td>
-                    <td>
-                        @x.country
-                    </td>
-                    <td>
-                        @x.serviceCategory
-                    </td>
-                    <td>
-                        @x.service
-                    </td>
-                    <td>
-                        @x.choosenService
-                    </td>
-                    <td>
-                        @x.orderDescription
-                    </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                                <span> Action</span>
-                            </button>
-                            <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                                <li><a href="/Admin/updatePO/@x.Id">Update</a></li>
-                                <li><a href="/Admin/DeletePP/@x.Id">Delete</a></li>
-                            </ul>
-                        </div>
-                    </td>
+<div class="container-fluid  " style="background-color: white; overflow-y: auto; overflow-x: auto; height: 80%; width:55%; margin-left:33%; border-radius: 7%;">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 style="color:black; font-weight:700; font-family:Gabriola; text-align:left; margin-left:10px; font-size:50px;">Pending Order>Private</h1>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>License Plate</th>
+                        <th>Chassi Number</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone No</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                        <th>Street Address</th>
+                        <th>Postcode</th>
+                        <th>City</th>
+                        <th>Country</th>
+                        <th>Service Category</th>
+                        <th>Service</th>
+                        <th>Choosen Service</th>
+                        <th>Order Description</th>
+                        <th>Action</th>
+                    </tr>
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td>
+                                @x.licensePlate
+                            </td>
+                            <td>
+                                @x.chassiNo
+                            </td>
+                            <td>
+                                @x.firstName
+                            </td>
+                            <td>
+                                @x.lastName
+                            </td>
+                            <td>
+                                @x.phoneNo
+                            </td>
+                            <td>
+                                @x.mobile
+                            </td>
+                            <td>
+                                @x.email
+                            </td>
+                            <td>
+                                @x.streetAddress
+                            </td>
+                            <td>
+                                @x.postcode
+                            </td>
+                            <td>
+                                @x.city
+                            </td>
+                            <td>
+                                @x.country
+                            </td>
+                            <td>
+                                @x.serviceCategory
+                            </td>
+                            <td>
+                                @x.service
+                            </td>
+                            <td>
+                                @x.choosenService
+                            </td>
+                            <td>
+                                @x.orderDescription
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                        <span> Action</span>
+                                    </button>
+                                    <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
+                                        <li><a href="/Admin/updatePO/@x.Id">Update</a></li>
+                                        <li><a href="/Admin/DeletePP/@x.Id">Delete</a></li>
+                                    </ul>
+                                </div>
+                            </td>
 
-                </tr>
-            }
-        </thead>
-    </table>
+                        </tr>
+                    }
+                </thead>
+            </table>
+        </div>
+    </div>
+
 </div>

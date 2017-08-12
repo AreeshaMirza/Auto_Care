@@ -3,8 +3,8 @@
     Layout = "~/Views/Shared/_LayoutClientPvt.cshtml";
 }
 
-<div class="container" style="background-color:white; float:right; width:74%; height:auto; border-radius:7%; margin-right:50px;">
-    <form action="/Admin/AddservicePvt" method="post" class="form-inline" role="form">
+<div class="container-fluid  " style="background-color: white; overflow-y: auto; overflow-x: auto; height: 80%; width:55%; margin-left:33%; border-radius: 7%;">
+    <form action="/PrivateClient/AddservicePvt" method="post" class="form-inline" role="form">
         <h1 style="color:black; font-weight:700; font-family:Gabriola; text-align:left; font-size:50px; margin-left:25px;">List>Private</h1>
         <div class="row">
             <div class="col-sm-4" id="form-style">
@@ -50,7 +50,7 @@
         var d = $('#d').val().toString();
         var e = $('#e').val().toString();
 
-        $.getJSON("/ClientPvt/Searchc",
+        $.getJSON("/PrivateClient/Searchc",
 
         {
             a: a,
@@ -127,8 +127,8 @@
                                 <span> Action</span>
                             </button>
                             <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                                <li><a href="/ClientPvt/updateSerPvt/@x.Id">Update</a></li>
-                                <li><a href="/ClientPvt/DeleteServicePvt/@x.Id">Delete</a></li>
+                                <li><a href="/PrivateClient/updateSerPvt/@x.Id">Update</a></li>
+                                <li><a href="/PrivateClient/DeleteServicePvt/@x.Id">Delete</a></li>
                             </ul>
                         </div>
                     </td>

@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Check_Add";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container" style="background-color:white; float:right; width:72%; height:auto; border-radius:7%; margin-right:70px;">
+    <h1 style="color:black; font-weight:700; font-family:Gabriola; text-align:left; margin-left:10px; font-size:50px;">Old Cars</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Name</th>
+                <th>Phone No</th>
+                <th>Provience</th>
+                <th>City</th>
+                <th>Image Path</th>
+            </tr>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>
+                        @x.Title
+                    </td>
+                    <td>
+                        @x.Description
+                    </td>
+                    <td>
+                        @x.Name
+                    </td>
+                    <td>
+                        @x.phoneNo
+                    </td>
+                    <td>
+                        @x.Provience
+                    </td>
+                    <td>
+                        @x.City
+                    </td>
+                    <td>
+                        @x.ImagePath
+                    </td>
+                </tr>
+            }
+        </thead>
+    </table>
+</div>

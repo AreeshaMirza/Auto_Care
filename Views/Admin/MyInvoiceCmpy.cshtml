@@ -70,90 +70,106 @@
 </script>
 
 
-<div class="container" style="background-color:white; width:78%; float: right;  height: auto; border-radius: 7%; margin-left: 200px; margin-right:25px; ">
-
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Invoice Number</th>
-                <th>Company Number</th>
-                <th>Invoice Date</th>
-                <th>Due Date</th>
-                <th>Order From</th>
-                <th>Order To</th>
-                <th>Invoice Date</th>
-                <th>OCR</th>
-                <th>Exp Date</th>
-                <th>Our Reference</th>
-                <th>Contact Person</th>
-                <th>Interset</th>
-                <th>Remainder Fee</th>
-                <th>User Name</th>
-                <th>Order Number</th>
-                <th>Status</th>
-                <th>Measurement</th>
-        <tbody id="t12">
-            @foreach (var x in Model)
-            {
+<div class="container-fluid  " style="background-color: white; overflow-y: auto; overflow-x: auto; height: 80%; width:73%; margin-left:23%; border-radius: 7%;">
+    <div id="print_all">
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                    <td>
-                        @x.InvoiceNo
-                    </td>
-                    <td>
-                        @x.CmpyNo
-                    </td>
-                    <td>
-                        @x.OrdersFrom
-                    </td>
-                    <td>
-                        @x.OrderTo
-                    </td>
-                    <td>
-                        @x.InvoiceDate
-                    </td>
-                    <td>
-                        @x.OCR
-                    </td>
-                    <td>
-                        @x.ExpDate
-                    </td>
-                    <td>
-                        @x.OueReference
-                    </td>
-                    <td>
-                        @x.ContactPerson
-                    </td>
-                    <td>
-                        @x.Interest
-                    </td>
-                    <td>
-                        @x.ReminderFee
-                    </td>
-                    <td>
-                        @x.UserName
-                    </td>
-                    <td>
-                        @x.OrderNo
-                    </td>
-                    <td>
-                        @x.Status
-                    </td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                                <span>Measurement</span>
-                            </button>
-                            <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                                <li><a href="/Admin/updateSerCmpy/@x.Id">Update</a></li>
-                                <li><a href="/Admin/DeleteServiceCmpy/@x.Id">Delete</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+                    <th>Invoice Number</th>
+                    <th>Company Number</th>
+                    <th>Order From</th>
+                    <th>Order To</th>
+                    <th>Invoice Date</th>
+                    <th>OCR</th>
+                    <th>Expire Date</th>
+                    <th>Our Reference</th>
+                    <th>Contact Person</th>
+                    <th>Interest</th>
+                    <th>Remainder Fee</th>
+                    <th>User Name</th>
+                    <th>Order Number</th>
+                    <th>Status</th>
+                    <th>Measurement</th>
+            <tbody id="t12">
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <td>
+                            @x.InvoiceNo
+                        </td>
+                        <td>
+                            @x.CmpyNo
+                        </td>
+                        <td>
+                            @x.OrdersFrom
+                        </td>
+                        <td>
+                            @x.OrderTo
+                        </td>
+                        <td>
+                            @x.InvoiceDate
+                        </td>
+                        <td>
+                            @x.OCR
+                        </td>
+                        <td>
+                            @x.ExpDate
+                        </td>
+                        <td>
+                            @x.OurReference
+                        </td>
+                        <td>
+                            @x.ContactPerson
+                        </td>
+                        <td>
+                            @x.Interest
+                        </td>
+                        <td>
+                            @x.ReminderFee
+                        </td>
+                        <td>
+                            @x.UserName
+                        </td>
+                        <td>
+                            @x.OrderNo
+                        </td>
+                        <td>
+                            @x.Status
+                        </td>
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    <span>Measurement</span>
+                                </button>
+                                <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
+                                    <li><a href="/Admin/updateInvoiceCmpy/@x.Id">Update</a></li>
+                                    <li><a href="/Admin/DeleteInvoiceCmpy/@x.Id">Delete</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <button id='' class='btn btn-primary' type='button' onclick='CallPrint321()'>Print</button>
+
+
+    <script>
+        function CallPrint321() {
+            var prtContent = document.getElementById("print_all").innerHTML;
+            var originalContents = document.body.innerHTML;
+            document.body.innerHTML = prtContent;
+            window.print();
+            document.body.innerHTML = originalContents;
+        }
+    </script>
 </div>
+
+
+
+
+
 
 
 

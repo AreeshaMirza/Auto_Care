@@ -3,92 +3,112 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-    <div class="container" style="background-color:white; float:right; width:auto; height:auto; border-radius:7%; margin-left:250px;">
 
-        <h1 style="color:black; font-weight:700; font-family:Gabriola; text-align:left; margin-left:10px; font-size:50px;">Open Order>Private</h1>
 
-        <table class="table-striped">
-            <thead>
-                <tr>
-                    <th>License Plate</th>
-                    <th>Chassi Number</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Phone No</th>
-                    <th>Mobile</th>
-                    <th>Email</th>
-                    <th>Street Address</th>
-                    <th>Postcode</th>
-                    <th>City</th>
-                    <th>Country</th>
-                    <th>Service Category</th>
-                    <th>Service</th>
-                    <th>Choosen Service</th>
-                    <th>Order Description</th>
-                    <th>Action</th>
-                </tr>
-                @foreach (var x in Model)
+<div class="container-fluid  " style="background-color: white; overflow-y: auto; overflow-x: auto; height: 80%; width:55%; margin-left:33%; border-radius: 7%;">
+    <h1 style="color:black; font-weight:700; font-family:Gabriola; text-align:left; margin-left:10px; font-size:50px;">Open Order>Private</h1>
+    <table class="table table-striped ">
+        <caption>&nbsp;</caption>
+        <thead class="">
+            <tr>
+                <th>License &nbsp; Plate</th>
+                <th>Chassi Number</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone No</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th>Street Address</th>
+                <th>Postcode</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Service Category</th>
+                <th>Service</th>
+                <th>Choosen Service</th>
+                <th>Order Description</th>
+                <th>Status</th>
+                <th>Date&Time</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var x in Model)
                 {
-                    <tr>
-                        <td>
-                            @x.licensePlate
-                        </td>
-                        <td>
-                            @x.chassiNo
-                        </td>
-                        <td>
-                            @x.firstName
-                        </td>
-                        <td>
-                            @x.lastName
-                        </td>
-                        <td>
-                            @x.phoneNo
-                        </td>
-                        <td>
-                            @x.mobile
-                        </td>
-                        <td>
-                            @x.email
-                        </td>
-                        <td>
-                            @x.streetAddress
-                        </td>
-                        <td>
-                            @x.postcode
-                        </td>
-                        <td>
-                            @x.city
-                        </td>
-                        <td>
-                            @x.country
-                        </td>
-                        <td>
-                            @x.serviceCategory
-                        </td>
-                        <td>
-                            @x.service
-                        </td>
-                        <td>
-                            @x.choosenService
-                        </td>
-                        <td>
-                            @x.orderDescription
-                        </td>
-                        <td>
-                            <div class="btn-group">
-                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                                    <span> Action</span>
-                                </button>
-                                <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
-                                    <li><a href="/Admin/updateOO/@x.Id">Update</a></li>
-                                    <li><a href="/Admin/Delete/@x.Id">Delete</a></li>
-                                </ul>
-                            </div>
-                        </td>
+                <tr>
+                    <td>
+                        @x.licensePlate
+                    </td>
+                    <td>
+                        @x.chassiNo
+                    </td>
+                    <td>
+                        @x.firstName
+                    </td>
+                    <td>
+                        @x.lastName
+                    </td>
+                    <td>
+                        @x.phoneNo
+                    </td>
+                    <td>
+                        @x.mobile
+                    </td>
+                    <td>
+                        @x.email
+                    </td>
+                    <td>
+                        @x.streetAddress
+                    </td>
+                    <td>
+                        @x.postcode
+                    </td>
+                    <td>
+                        @x.city
+                    </td>
+                    <td>
+                        @x.country
+                    </td>
+                    <td>
+                        @x.serviceCategory
+                    </td>
+                    <td>
+                        @x.service
+                    </td>
+                    <td>
+                        @x.choosenService
+                    </td>
+                    <td>
+                        @x.orderDescription
+                    </td>
+                    <td>
+                        @x.status
+                    </td>
+                    <td>
+                        @x.dateTime
+                    </td>
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span>Action</span>
+                            </button>
+                            <ul class="dropdown-menu stay-open pull-right" role="menu" style="padding: 15px; min-width: 100px;">
+                                <li><a href="/Admin/updateOO/@x.Id">Update</a></li>
+                                <li><a href="/Admin/Delete/@x.Id">Delete</a></li>
+                            </ul>
+                        </div>
+                    </td>
 
-                    </tr>
+                </tr>
+
                 }
-            </thead>
-        </table>
-    </div>
+        </tbody>
+
+    </table>
+
+
+
+</div>
+</div>
+
